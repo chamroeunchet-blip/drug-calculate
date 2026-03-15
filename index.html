@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="km">
 <head>
 <meta charset="UTF-8">
@@ -7,508 +8,208 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MedCalc Pro">
-<meta name="application-name" content="MedCalc Pro">
 <meta name="theme-color" content="#0088cc">
-<meta name="msapplication-TileColor" content="#0a0e1a">
-<meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/144/3492/3492182.png">
-
-<!-- SEO Meta -->
-<title>MedCalc Pro — AI Drug Dosage Calculator for Physicians</title>
-<meta name="description" content="AI-powered drug dosage calculator for medical professionals. Get evidence-based drug recommendations by diagnosis, calculate pediatric/adult doses, renal & hepatic dose adjustments based on Lab values (Creatinine, Urea, ASAT, ALAT).">
-<meta name="keywords" content="drug dosage calculator, medical calculator, pediatric dosing, antibiotic dose, renal adjustment, hepatic adjustment, clinical pharmacology, physician tool, MedCalc">
-<meta name="author" content="MedCalc Pro">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://medcalcpro.app/">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://medcalcpro.app/">
-<meta property="og:title" content="MedCalc Pro — AI Drug Dosage Calculator">
-<meta property="og:description" content="Professional AI-powered drug dosage calculator. Diagnosis → Drug recommendations, real-time dose calculation with renal & hepatic adjustments based on Lab values.">
-<meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/3492/3492182.png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<meta property="og:image:alt" content="MedCalc Pro Drug Calculator Icon">
-<meta property="og:site_name" content="MedCalc Pro">
-<meta property="og:locale" content="km_KH">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://medcalcpro.app/">
-<meta name="twitter:title" content="MedCalc Pro — AI Drug Dosage Calculator">
-<meta name="twitter:description" content="Professional AI drug dosage calculator for physicians. Evidence-based drug selection by diagnosis + renal/hepatic Lab adjustments.">
-<meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/512/3492/3492182.png">
-<meta name="twitter:image:alt" content="MedCalc Pro">
-
-<!-- PWA Manifest -->
+<title>MedCalc Pro — AI Drug Dosage Calculator</title>
+<meta name="description" content="AI-powered drug dosage calculator for physicians. Diagnosis to drug recommendation, dose calculation with renal/hepatic adjustment.">
 <link rel="manifest" href="manifest.json">
-
-<!-- Apple Touch Icons -->
 <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3492/3492182.png">
-<link rel="apple-touch-icon" sizes="152x152" href="https://cdn-icons-png.flaticon.com/152/3492/3492182.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/180/3492/3492182.png">
-<link rel="apple-touch-icon" sizes="167x167" href="https://cdn-icons-png.flaticon.com/167/3492/3492182.png">
-
-<!-- Favicons -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn-icons-png.flaticon.com/32/3492/3492182.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn-icons-png.flaticon.com/16/3492/3492182.png">
-<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/32/3492/3492182.png">
-
-<!-- Apple Splash Screens -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-startup-image" href="https://cdn-icons-png.flaticon.com/512/3492/3492182.png">
-
-<!-- Structured Data / JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "MedCalc Pro",
-  "url": "https://medcalcpro.app/",
-  "description": "AI-powered drug dosage calculator for medical professionals",
-  "applicationCategory": "MedicalApplication",
-  "operatingSystem": "Any",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "author": { "@type": "Organization", "name": "MedCalc Pro" },
-  "image": "https://cdn-icons-png.flaticon.com/512/3492/3492182.png",
-  "screenshot": "https://cdn-icons-png.flaticon.com/512/3492/3492182.png",
-  "featureList": [
-    "Diagnosis to drug recommendations",
-    "Weight-based dosage calculation",
-    "Renal dose adjustment (Creatinine, Urea)",
-    "Hepatic dose adjustment (ASAT, ALAT)",
-    "AI-powered drug lookup",
-    "Calculation whiteboard",
-    "History tracking",
-    "Offline support"
-  ]
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0e1a;
-    --surface: #111827;
-    --surface2: #1a2236;
-    --surface3: #1e2d42;
-    --border: #1e3a5f;
-    --border2: #2a4a6e;
-    --accent: #00d4ff;
-    --accent2: #0088cc;
-    --accent3: #00ff88;
-    --warn: #ff8c00;
-    --danger: #ff4757;
-    --text: #e8f4ff;
-    --text2: #8ba8c8;
-    --text3: #4a6a8a;
-    --gold: #ffd700;
-    --mono: 'JetBrains Mono', monospace;
-    --sans: 'Inter', sans-serif;
-    --display: 'Syne', sans-serif;
-    --safe-top: env(safe-area-inset-top, 0px);
-    --safe-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    min-height: 100vh;
-    min-height: 100dvh;
-    overflow-x: hidden;
-    padding-top: var(--safe-top);
-    padding-bottom: var(--safe-bottom);
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      radial-gradient(ellipse 80% 40% at 20% 10%, rgba(0,212,255,0.04) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 60% at 80% 80%, rgba(0,136,204,0.03) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
+:root{--bg:#0a0e1a;--s1:#111827;--s2:#1a2236;--s3:#1e2d42;--b1:#1e3a5f;--b2:#2a4a6e;--ac:#00d4ff;--ac2:#0088cc;--ac3:#00ff88;--warn:#ff8c00;--danger:#ff4757;--tx:#e8f4ff;--tx2:#8ba8c8;--tx3:#4a6a8a;--mono:'JetBrains Mono',monospace;--sans:'Inter',sans-serif;--disp:'Syne',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 20% 10%,rgba(0,212,255,.04),transparent 60%),radial-gradient(ellipse 60% 60% at 80% 80%,rgba(0,136,204,.03),transparent 60%);pointer-events:none;z-index:0}
 
-  /* HEADER */
-  header {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(10,14,26,0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-    padding: 10px 20px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .logo-icon {
-    width: 36px; height: 36px;
-    border-radius: 10px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: var(--surface2);
-    border: 1px solid var(--border2);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .logo-icon img { width: 26px; height: 26px; object-fit: contain; }
-  .logo {
-    font-family: var(--display);
-    font-size: 20px; font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -0.5px;
-    line-height: 1;
-  }
-  .logo-sub { font-size: 11px; color: var(--text3); font-family: var(--mono); margin-top: 1px; }
-  .header-badge {
-    background: rgba(0,212,255,0.1);
-    border: 1px solid var(--border2);
-    color: var(--accent);
-    font-size: 10px; font-family: var(--mono);
-    padding: 3px 8px; border-radius: 20px;
-    letter-spacing: 1px;
-  }
-  .header-right { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(–b1);padding:10px 20px;display:flex;align-items:center;gap:12px}
+.logo-icon{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;background:var(–s2);border:1px solid var(–b2);display:flex;align-items:center;justify-content:center}
+.logo-icon img{width:26px;height:26px;object-fit:contain}
+.logo-wrap .logo{font-family:var(–disp);font-size:20px;font-weight:800;color:var(–ac);letter-spacing:-.5px}
+.logo-wrap .logo-sub{font-size:11px;color:var(–tx3);font-family:var(–mono)}
+.hbadge{background:rgba(0,212,255,.1);border:1px solid var(–b2);color:var(–ac);font-size:10px;font-family:var(–mono);padding:3px 8px;border-radius:20px;letter-spacing:1px}
+.hright{margin-left:auto;display:flex;gap:6px;align-items:center}
 
-  /* INSTALL BANNER */
-  #installBanner {
-    display: none;
-    background: linear-gradient(135deg, #0a2a3e, #0d1f35);
-    border-bottom: 1px solid rgba(0,212,255,0.2);
-    padding: 10px 20px;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-    z-index: 99;
-    animation: slideDown 0.4s ease;
-  }
-  #installBanner.show { display: flex; }
-  @keyframes slideDown { from{transform:translateY(-100%);opacity:0} to{transform:translateY(0);opacity:1} }
-  .install-icon { width: 40px; height: 40px; border-radius: 10px; overflow:hidden; background: var(--surface3); border: 1px solid var(--border2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .install-icon img { width: 30px; height: 30px; object-fit: contain; }
-  .install-text { flex: 1; }
-  .install-title { font-size: 13px; font-weight: 700; color: var(--text); }
-  .install-sub { font-size: 11px; color: var(--text2); margin-top: 1px; }
-  .install-btns { display: flex; gap: 6px; }
-  #btnInstall {
-    background: var(--accent2);
-    color: white; border: none;
-    padding: 7px 16px; border-radius: 8px;
-    font-size: 12px; font-weight: 700;
-    cursor: pointer; white-space: nowrap;
-    transition: all 0.2s;
-  }
-  #btnInstall:hover { background: #006fa3; transform: scale(1.03); }
-  #btnDismiss {
-    background: transparent;
-    color: var(--text3); border: 1px solid var(--border);
-    padding: 7px 12px; border-radius: 8px;
-    font-size: 12px; cursor: pointer;
-    transition: all 0.2s;
-  }
-  #btnDismiss:hover { color: var(--text2); border-color: var(--border2); }
+/* INSTALL BANNER */
+#installBanner{display:none;background:linear-gradient(135deg,#0a2a3e,#0d1f35);border-bottom:1px solid rgba(0,212,255,.2);padding:10px 20px;align-items:center;gap:12px;position:relative;z-index:99}
+#installBanner.show{display:flex}
+.ib-icon{width:38px;height:38px;border-radius:9px;overflow:hidden;background:var(–s3);border:1px solid var(–b2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ib-icon img{width:28px;height:28px;object-fit:contain}
+.ib-text{flex:1}
+.ib-title{font-size:13px;font-weight:700;color:var(–tx)}
+.ib-sub{font-size:11px;color:var(–tx2)}
+.ib-btns{display:flex;gap:6px}
+#btnInstall{background:var(–ac2);color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+#btnInstall:hover{background:#006fa3}
+#btnDismiss{background:transparent;color:var(–tx3);border:1px solid var(–b1);padding:7px 10px;border-radius:8px;font-size:12px;cursor:pointer}
 
-  /* OFFLINE INDICATOR */
-  #offlineBar {
-    display: none;
-    background: rgba(255,140,0,0.15);
-    border-bottom: 1px solid rgba(255,140,0,0.3);
-    padding: 8px 20px;
-    text-align: center;
-    font-size: 12px; color: var(--warn);
-    font-family: var(--mono);
-    z-index: 98;
-  }
-  #offlineBar.show { display: block; }
+/* OFFLINE BAR */
+#offlineBar{display:none;background:rgba(255,140,0,.12);border-bottom:1px solid rgba(255,140,0,.3);padding:7px 20px;text-align:center;font-size:12px;color:var(–warn);font-family:var(–mono)}
+#offlineBar.show{display:block}
 
-  /* MAIN LAYOUT */
-  .app {
-    position: relative; z-index: 1;
-    max-width: 1400px; margin: 0 auto;
-    padding: 20px 16px;
-  }
+/* APP */
+.app{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:20px 16px}
 
-  /* MODE TABS */
-  .mode-tabs {
-    display: flex; gap: 4px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 4px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 520px;
-  }
-  .mode-tab {
-    padding: 10px 20px;
-    border-radius: 9px;
-    border: none;
-    background: transparent;
-    color: var(--text2);
-    font-family: var(--sans); font-size: 13px; font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex; align-items: center; gap: 7px;
-    flex: 1; justify-content: center;
-  }
-  .mode-tab.active {
-    background: var(--accent2);
-    color: white;
-    box-shadow: 0 0 20px rgba(0,136,204,0.4);
-  }
-  .mode-tab:hover:not(.active) { background: var(--surface2); color: var(--text); }
+/* MODE TABS */
+.mode-tabs{display:flex;gap:4px;background:var(–s1);border:1px solid var(–b1);border-radius:12px;padding:4px;margin-bottom:20px;width:100%;max-width:520px}
+.mode-tab{padding:10px 18px;border-radius:9px;border:none;background:transparent;color:var(–tx2);font-family:var(–sans);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;flex:1;display:flex;align-items:center;justify-content:center;gap:6px}
+.mode-tab.active{background:var(–ac2);color:#fff;box-shadow:0 0 20px rgba(0,136,204,.4)}
+.mode-tab:hover:not(.active){background:var(–s2);color:var(–tx)}
 
-  /* GRID LAYOUT */
-  .grid-layout {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 18px;
-    align-items: start;
-  }
-  @media (max-width: 900px) {
-    .grid-layout { grid-template-columns: 1fr; }
-    .mode-tabs { max-width: 100%; }
-    .mode-tab { font-size: 12px; padding: 9px 12px; }
-  }
+/* LAYOUT */
+.grid-layout{display:grid;grid-template-columns:360px 1fr;gap:18px;align-items:start}
+@media(max-width:900px){.grid-layout{grid-template-columns:1fr}.mode-tabs{max-width:100%}}
 
-  /* CARDS */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .card-header {
-    padding: 14px 18px;
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; gap: 10px;
-    background: var(--surface2);
-  }
-  .card-title {
-    font-family: var(--display);
-    font-size: 14px; font-weight: 700;
-    color: var(--text);
-    letter-spacing: 0.3px;
-  }
-  .card-icon {
-    width: 28px; height: 28px;
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.2);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
-  }
-  .card-icon-img {
-    width: 28px; height: 28px;
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.2);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .card-icon-img img { width: 18px; height: 18px; object-fit: contain; filter: brightness(1.5) saturate(0.5) hue-rotate(180deg); }
-  .card-body { padding: 18px; }
+/* CARD */
+.card{background:var(–s1);border:1px solid var(–b1);border-radius:16px;overflow:hidden;margin-bottom:14px}
+.card:last-child{margin-bottom:0}
+.card-hd{padding:13px 18px;border-bottom:1px solid var(–b1);display:flex;align-items:center;gap:10px;background:var(–s2)}
+.card-title{font-family:var(–disp);font-size:14px;font-weight:700;color:var(–tx)}
+.card-icon{width:28px;height:28px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.card-icon-img{width:28px;height:28px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.card-icon-img img{width:18px;height:18px;object-fit:contain;filter:brightness(1.5)saturate(.5)hue-rotate(180deg)}
+.card-body{padding:16px 18px}
 
-  /* FORM ELEMENTS */
-  .form-group { margin-bottom: 14px; }
-  .form-label {
-    display: block;
-    font-size: 10px; font-weight: 600;
-    color: var(--text3);
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    font-family: var(--mono);
-  }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+/* FORM */
+.form-group{margin-bottom:13px}
+.form-label{display:block;font-size:10px;font-weight:600;color:var(–tx3);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;font-family:var(–mono)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+input[type=text],input[type=number],select{width:100%;background:var(–s2);border:1px solid var(–b1);border-radius:10px;color:var(–tx);font-family:var(–sans);font-size:14px;padding:10px 13px;outline:none;transition:all .2s;-webkit-appearance:none;appearance:none}
+input:focus,select:focus{border-color:var(–ac2);box-shadow:0 0 0 3px rgba(0,136,204,.15);background:var(–s3)}
+select{cursor:pointer;background-image:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ fill=‘none’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%234a6a8a’ stroke-width=‘1.5’ stroke-linecap=‘round’/%3E%3C/svg%3E”);background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+select option{background:#1a2236;color:#e8f4ff}
 
-  input[type=text], input[type=number], select, textarea {
-    width: 100%;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text);
-    font-family: var(--sans); font-size: 14px;
-    padding: 10px 13px;
-    outline: none;
-    transition: all 0.2s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--accent2);
-    box-shadow: 0 0 0 3px rgba(0,136,204,0.15);
-    background: var(--surface3);
-  }
-  select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a6a8a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
-  select option { background: #1a2236; color: #e8f4ff; }
+/* AUTOCOMPLETE */
+.ac-wrap{position:relative}
+.ac-dd{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(–s3);border:1px solid var(–b2);border-radius:10px;max-height:220px;overflow-y:auto;z-index:2000;box-shadow:0 8px 32px rgba(0,0,0,.6);display:none}
+.ac-dd.show{display:block}
+.dd-item{padding:9px 13px;cursor:pointer;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;transition:background .12s}
+.dd-item:last-child{border-bottom:none}
+.dd-item:hover,.dd-item.active{background:rgba(0,136,204,.2);color:var(–ac)}
+.dd-item .dd-class{font-size:10px;color:var(–tx3);font-family:var(–mono);flex-shrink:0;margin-left:8px}
 
-  .autocomplete-wrap { position: relative; }
-  .autocomplete-dropdown {
-    position: absolute; top: calc(100% + 4px); left: 0; right: 0;
-    background: var(--surface3);
-    border: 1px solid var(--border2);
-    border-radius: 10px;
-    max-height: 220px; overflow-y: auto;
-    z-index: 1000;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-    display: none;
-  }
-  .autocomplete-dropdown.show { display: block; }
-  .dropdown-item {
-    padding: 10px 13px;
-    cursor: pointer;
-    font-size: 13px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    transition: background 0.15s;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-item:hover, .dropdown-item.active { background: rgba(0,136,204,0.2); color: var(--accent); }
-  .dropdown-item .drug-class { font-size: 10px; color: var(--text3); font-family: var(--mono); flex-shrink:0; margin-left:8px; }
+/* DIAG TAGS */
+.diag-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;min-height:10px}
+.diag-tag{background:rgba(0,136,204,.15);border:1px solid rgba(0,136,204,.3);color:var(–ac);font-size:12px;padding:4px 10px;border-radius:20px;display:flex;align-items:center;gap:5px;font-family:var(–mono)}
+.diag-tag button{background:none;border:none;color:var(–ac2);cursor:pointer;font-size:15px;padding:0;line-height:1;display:flex;align-items:center}
 
-  /* DIAGNOSIS TAGS */
-  .diag-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-  .diag-tag {
-    background: rgba(0,136,204,0.15);
-    border: 1px solid rgba(0,136,204,0.3);
-    color: var(--accent);
-    font-size: 12px; padding: 4px 10px;
-    border-radius: 20px;
-    display: flex; align-items: center; gap: 5px;
-    font-family: var(--mono);
-  }
-  .diag-tag button { background: none; border: none; color: var(--accent2); cursor: pointer; font-size: 14px; padding: 0; line-height: 1; }
+/* LAB */
+.lab-toggle{display:flex;align-items:center;gap:8px;cursor:pointer;margin-bottom:10px}
+.lab-toggle input[type=checkbox]{cursor:pointer;accent-color:var(–ac2);width:15px;height:15px}
+.lab-toggle label{font-size:12px;color:var(–tx2);cursor:pointer}
+.lab-badge{display:inline-flex;align-items:center;background:rgba(255,140,0,.1);border:1px solid rgba(255,140,0,.3);color:var(–warn);font-size:10px;padding:2px 7px;border-radius:20px;font-family:var(–mono)}
+.lab-fields{display:none}
+.lab-fields.show{display:block}
 
-  /* LAB SECTION */
-  .lab-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; margin-bottom: 10px; }
-  .lab-toggle input[type=checkbox] { cursor: pointer; accent-color: var(--accent2); width: 16px; height: 16px; }
-  .lab-toggle label { font-size: 12px; color: var(--text2); cursor: pointer; }
-  .lab-fields { display: none; }
-  .lab-fields.show { display: block; }
-  .lab-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,140,0,0.1); border: 1px solid rgba(255,140,0,0.3); color: var(--warn); font-size: 10px; padding: 2px 7px; border-radius: 20px; font-family: var(--mono); }
+/* BUTTONS */
+.btn{padding:11px 20px;border-radius:10px;border:none;font-family:var(–sans);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;-webkit-tap-highlight-color:transparent}
+.btn-primary{background:linear-gradient(135deg,var(–ac2),#005fa3);color:#fff;box-shadow:0 4px 16px rgba(0,136,204,.3);width:100%;justify-content:center}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,136,204,.45)}
+.btn-primary:active{transform:translateY(0)}
+.btn-secondary{background:var(–s2);color:var(–tx2);border:1px solid var(–b1)}
+.btn-secondary:hover{background:var(–s3);color:var(–tx)}
+.btn-sm{padding:6px 12px;font-size:12px}
+.btn-danger{background:rgba(255,71,87,.12);color:var(–danger);border:1px solid rgba(255,71,87,.3)}
 
-  /* BUTTONS */
-  .btn { padding: 11px 20px; border-radius: 10px; border: none; font-family: var(--sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; -webkit-tap-highlight-color: transparent; }
-  .btn-primary { background: linear-gradient(135deg, var(--accent2), #005fa3); color: white; box-shadow: 0 4px 16px rgba(0,136,204,0.3); width: 100%; justify-content: center; }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,136,204,0.45); }
-  .btn-primary:active { transform: translateY(0); }
-  .btn-secondary { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
-  .btn-secondary:hover { background: var(--surface3); color: var(--text); }
-  .btn-sm { padding: 6px 12px; font-size: 12px; }
-  .btn-danger { background: rgba(255,71,87,0.15); color: var(--danger); border: 1px solid rgba(255,71,87,0.3); }
+/* AI THINKING */
+.ai-thinking{display:none;align-items:center;gap:10px;padding:12px 16px;background:rgba(0,136,204,.06);border:1px solid rgba(0,136,204,.2);border-radius:12px;margin-bottom:14px;font-size:13px;color:var(–tx2)}
+.ai-thinking.show{display:flex}
+.ai-dot{width:7px;height:7px;border-radius:50%;background:var(–ac);animation:pulse 1s ease-in-out infinite}
+.ai-dot:nth-child(2){animation-delay:.2s}
+.ai-dot:nth-child(3){animation-delay:.4s}
+@keyframes pulse{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
 
-  /* RESULT */
-  .result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-  .result-title { font-family: var(--display); font-size: 17px; font-weight: 700; color: var(--text); }
+/* RESULTS */
+.result-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.result-title{font-family:var(–disp);font-size:17px;font-weight:700;color:var(–tx)}
 
-  .drug-result { background: var(--surface2); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; overflow: hidden; transition: border-color 0.2s; }
-  .drug-result:hover { border-color: var(--border2); }
-  .drug-result-header { padding: 13px 16px; background: linear-gradient(135deg, var(--surface3), var(--surface2)); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
-  .drug-name { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--accent); }
-  .drug-generic { font-size: 11px; color: var(--text3); font-family: var(--mono); }
-  .drug-class-badge { margin-left: auto; background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2); color: var(--accent); font-size: 10px; padding: 3px 9px; border-radius: 20px; font-family: var(--mono); flex-shrink:0; }
-  .drug-result-body { padding: 14px 16px; }
+.drug-result{background:var(–s2);border:1px solid var(–b1);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:border-color .2s}
+.drug-result:hover{border-color:var(–b2)}
+.drug-result-hd{padding:12px 16px;background:linear-gradient(135deg,var(–s3),var(–s2));border-bottom:1px solid var(–b1);display:flex;align-items:center;gap:12px}
+.drug-name{font-family:var(–disp);font-size:16px;font-weight:700;color:var(–ac)}
+.drug-generic{font-size:11px;color:var(–tx3);font-family:var(–mono);margin-top:2px}
+.drug-cls{margin-left:auto;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);color:var(–ac);font-size:10px;padding:3px 9px;border-radius:20px;font-family:var(–mono);flex-shrink:0;text-align:center}
+.drug-result-body{padding:14px 16px}
 
-  .dose-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; margin-bottom: 12px; }
-  .dose-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 9px 11px; }
-  .dose-cell-label { font-size: 9px; color: var(--text3); font-family: var(--mono); text-transform: uppercase; margin-bottom: 3px; }
-  .dose-cell-value { font-size: 15px; font-weight: 700; font-family: var(--mono); color: var(--text); }
-  .dose-cell-unit { font-size: 10px; color: var(--text2); }
-  .dose-cell.highlight { border-color: rgba(0,212,255,0.3); background: rgba(0,212,255,0.06); }
-  .dose-cell.highlight .dose-cell-value { color: var(--accent); }
-  .dose-cell.warn { border-color: rgba(255,140,0,0.3); background: rgba(255,140,0,0.06); }
-  .dose-cell.warn .dose-cell-value { color: var(--warn); }
-  .dose-cell.danger { border-color: rgba(255,71,87,0.3); background: rgba(255,71,87,0.06); }
-  .dose-cell.danger .dose-cell-value { color: var(--danger); }
+.dose-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-bottom:12px}
+.dose-cell{background:var(–s1);border:1px solid var(–b1);border-radius:10px;padding:9px 11px}
+.dc-label{font-size:9px;color:var(–tx3);font-family:var(–mono);text-transform:uppercase;margin-bottom:3px}
+.dc-val{font-size:14px;font-weight:700;font-family:var(–mono);color:var(–tx)}
+.dc-unit{font-size:10px;color:var(–tx2)}
+.dose-cell.hl{border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.06)}
+.dose-cell.hl .dc-val{color:var(–ac)}
+.dose-cell.wn{border-color:rgba(255,140,0,.3);background:rgba(255,140,0,.06)}
+.dose-cell.wn .dc-val{color:var(–warn)}
+.dose-cell.dg{border-color:rgba(255,71,87,.3);background:rgba(255,71,87,.06)}
+.dose-cell.dg .dc-val{color:var(–danger)}
 
-  .indications-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
-  .indication-tag { background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.2); color: var(--accent3); font-size: 10px; padding: 3px 8px; border-radius: 20px; font-family: var(--mono); }
+.ind-list{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.ind-tag{background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.2);color:var(–ac3);font-size:10px;padding:3px 8px;border-radius:20px;font-family:var(–mono)}
 
-  .whiteboard { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-  .whiteboard-header { padding: 11px 14px; background: var(--surface3); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-  .whiteboard-body { padding: 14px; font-family: var(--mono); font-size: 12px; color: var(--text2); line-height: 1.8; min-height: 160px; white-space: pre-wrap; }
-  .calc-step { color: var(--text); }
-  .calc-result { color: var(--accent); font-weight: 700; }
-  .calc-formula { color: var(--accent3); }
-  .calc-warn { color: var(--warn); }
-  .calc-section { color: var(--text3); border-bottom: 1px solid var(--border); padding-bottom: 5px; margin-bottom: 8px; font-size: 10px; letter-spacing: 1px; }
+/* WHITEBOARD */
+.wb{background:var(–s2);border:1px solid var(–b1);border-radius:12px;overflow:hidden}
+.wb-hd{padding:10px 14px;background:var(–s3);border-bottom:1px solid var(–b1);display:flex;align-items:center;gap:10px}
+.wb-body{padding:13px;font-family:var(–mono);font-size:12px;color:var(–tx2);line-height:1.8;min-height:120px;white-space:pre-wrap}
+.cs{color:var(–tx)}
+.cr{color:var(–ac);font-weight:700}
+.cf{color:var(–ac3)}
+.cw{color:var(–warn)}
+.csec{color:var(–tx3);border-bottom:1px solid var(–b1);padding-bottom:4px;margin-bottom:8px;font-size:10px;letter-spacing:1px;display:block}
 
-  .ai-thinking { display: none; align-items: center; gap: 10px; padding: 12px 16px; background: rgba(0,136,204,0.06); border: 1px solid rgba(0,136,204,0.2); border-radius: 12px; margin-bottom: 14px; font-size: 13px; color: var(--text2); }
-  .ai-thinking.show { display: flex; }
-  .ai-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 1s ease-in-out infinite; }
-  .ai-dot:nth-child(2) { animation-delay: 0.2s; }
-  .ai-dot:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes pulse { 0%,100%{opacity:.3;transform:scale(.8)} 50%{opacity:1;transform:scale(1)} }
+/* TABS */
+.rtabs{display:flex;gap:4px;margin-bottom:12px;border-bottom:1px solid var(–b1)}
+.rtab{padding:7px 14px;background:none;border:none;color:var(–tx3);font-size:12px;font-family:var(–sans);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px}
+.rtab.active{color:var(–ac);border-bottom-color:var(–ac)}
+.rtab:hover:not(.active){color:var(–tx2)}
+.rtab-content{display:none}
+.rtab-content.active{display:block}
 
-  .history-item { padding: 11px 14px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.15s; display: flex; align-items: center; gap: 10px; }
-  .history-item:hover { background: var(--surface2); }
-  .history-item:last-child { border-bottom: none; }
-  .history-time { font-size: 9px; color: var(--text3); font-family: var(--mono); white-space: nowrap; }
-  .history-info { flex: 1; min-width: 0; }
-  .history-patient { font-size: 12px; font-weight: 600; color: var(--text); }
-  .history-diag { font-size: 10px; color: var(--text2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .history-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; }
+/* ORGAN ALERTS */
+.oa{padding:8px 12px;border-radius:9px;margin-top:8px;font-size:11px;line-height:1.5}
+.oa.kidney{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);color:#80d8f0}
+.oa.liver{background:rgba(255,140,0,.08);border:1px solid rgba(255,140,0,.2);color:#ffb84d}
+.oa.ok{background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.15);color:#66ffb2}
 
-  .organ-alert { padding: 9px 13px; border-radius: 10px; margin-top: 8px; font-size: 11px; display: flex; align-items: flex-start; gap: 7px; line-height: 1.5; }
-  .organ-alert.kidney { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: #80d8f0; }
-  .organ-alert.liver { background: rgba(255,140,0,0.08); border: 1px solid rgba(255,140,0,0.2); color: #ffb84d; }
-  .organ-alert.normal { background: rgba(0,255,136,0.06); border: 1px solid rgba(0,255,136,0.15); color: #66ffb2; }
+/* HISTORY */
+.hist-item{padding:11px 14px;border-bottom:1px solid var(–b1);cursor:pointer;transition:background .12s;display:flex;align-items:center;gap:10px}
+.hist-item:hover{background:var(–s2)}
+.hist-item:last-child{border-bottom:none}
+.hist-dot{width:7px;height:7px;border-radius:50%;background:var(–ac2);flex-shrink:0}
+.hist-info{flex:1;min-width:0}
+.hist-patient{font-size:12px;font-weight:600;color:var(–tx)}
+.hist-diag{font-size:10px;color:var(–tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-time{font-size:9px;color:var(–tx3);font-family:var(–mono);white-space:nowrap}
 
-  ::-webkit-scrollbar { width: 5px; height: 5px; }
-  ::-webkit-scrollbar-track { background: var(--surface); }
-  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+/* EMPTY STATE */
+.empty-state{text-align:center;padding:50px 20px;color:var(–tx3)}
+.es-icon{width:60px;height:60px;margin:0 auto 14px;opacity:.25}
+.es-icon img{width:100%;height:100%;object-fit:contain}
+.es-text{font-size:14px}
 
-  .result-tabs { display: flex; gap: 4px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
-  .result-tab { padding: 7px 14px; background: none; border: none; color: var(--text3); font-size: 12px; font-family: var(--sans); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; margin-bottom: -1px; }
-  .result-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .result-tab:hover:not(.active) { color: var(--text2); }
-  .result-tab-content { display: none; }
-  .result-tab-content.active { display: block; }
+/* NOTIF */
+.notif{position:fixed;bottom:24px;right:20px;background:var(–s3);border:1px solid var(–b2);border-radius:12px;padding:10px 18px;font-size:13px;color:var(–tx);box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s}
+.notif.show{transform:translateY(0);opacity:1}
 
-  .empty-state { text-align: center; padding: 50px 20px; color: var(--text3); }
-  .empty-state-icon-img { width: 64px; height: 64px; margin: 0 auto 14px; opacity: 0.3; }
-  .empty-state-icon-img img { width: 100%; height: 100%; object-fit: contain; }
-  .empty-state-text { font-size: 14px; }
+/* SCROLLBAR */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:var(–b2);border-radius:3px}
 
-  .notif { position: fixed; bottom: calc(24px + var(--safe-bottom)); right: 20px; background: var(--surface3); border: 1px solid var(--border2); border-radius: 12px; padding: 11px 18px; font-size: 13px; color: var(--text); box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 9999; transform: translateY(80px); opacity: 0; transition: all 0.3s; }
-  .notif.show { transform: translateY(0); opacity: 1; }
-
-  .text-mono { font-family: var(--mono); }
-  .flex { display: flex; }
-  .items-center { align-items: center; }
-  .gap-2 { gap: 8px; }
-  .flex-1 { flex: 1; }
-
-  /* PWA standalone safe area */
-  @media (display-mode: standalone) {
-    header { padding-top: max(10px, var(--safe-top)); }
-  }
-
-  @media print {
-    header, #installBanner, #offlineBar, .mode-tabs, .left-panel, #historySidebar, .btn-secondary { display: none !important; }
-    .grid-layout { grid-template-columns: 1fr; }
-    body { background: white; color: black; }
-    .card { border: 1px solid #ccc; box-shadow: none; }
-    .drug-result { border: 1px solid #ccc; }
-    .dose-cell { border: 1px solid #ccc; background: #f9f9f9; }
-    .dose-cell-value { color: #000 !important; }
-  }
+@media print{header,#installBanner,#offlineBar,.mode-tabs,.left-panel,#historySidebar,.btn-secondary{display:none!important}.grid-layout{grid-template-columns:1fr}body{background:#fff;color:#000}.card,.drug-result{border:1px solid #ccc}}
 </style>
+
 </head>
 <body>
 
-<!-- OFFLINE INDICATOR -->
-<div id="offlineBar">📵 You are offline — App running from cache</div>
+<div id="offlineBar">📵 Offline — App running from cache</div>
 
-<!-- INSTALL BANNER -->
 <div id="installBanner">
-  <div class="install-icon"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt="MedCalc Pro"></div>
-  <div class="install-text">
-    <div class="install-title">Install MedCalc Pro</div>
-    <div class="install-sub">Add to home screen for quick access &amp; offline use</div>
+  <div class="ib-icon"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt="MedCalc"></div>
+  <div class="ib-text">
+    <div class="ib-title">Install MedCalc Pro</div>
+    <div class="ib-sub">Add to home screen for quick offline access</div>
   </div>
-  <div class="install-btns">
+  <div class="ib-btns">
     <button id="btnInstall">📲 Install</button>
     <button id="btnDismiss">✕</button>
   </div>
@@ -516,329 +217,365 @@
 
 <header>
   <div class="logo-icon"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt="MedCalc Pro"></div>
-  <div>
+  <div class="logo-wrap">
     <div class="logo">MedCalc Pro</div>
     <div class="logo-sub">Drug Dosage System</div>
   </div>
-  <div class="header-badge">v2.0 AI</div>
-  <div class="header-right">
-    <button class="btn btn-secondary btn-sm" onclick="toggleHistory()">📋</button>
+  <div class="hbadge">v2.0 AI</div>
+  <div class="hright">
+    <button class="btn btn-secondary btn-sm" onclick="toggleHistory()">📋 History</button>
     <button class="btn btn-secondary btn-sm" onclick="window.print()">🖨️</button>
   </div>
 </header>
 
 <div class="app">
   <div class="mode-tabs">
-    <button class="mode-tab active" id="tab-mode1" onclick="switchMode(1)">🏥 Diagnosis→Drug</button>
-    <button class="mode-tab" id="tab-mode2" onclick="switchMode(2)">💊 Drug→Dose</button>
+    <button class="mode-tab active" id="tab-mode1" onclick="switchMode(1)">🏥 Diagnosis → Drug</button>
+    <button class="mode-tab" id="tab-mode2" onclick="switchMode(2)">💊 Drug → Dose</button>
   </div>
 
   <div class="grid-layout">
+    <!-- LEFT: INPUTS -->
     <div class="left-panel">
-      <!-- PATIENT INFO -->
-      <div class="card" style="margin-bottom:14px">
-        <div class="card-header">
-          <div class="card-icon-img"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt=""></div>
-          <div class="card-title">Patient Information</div>
+
+```
+  <!-- PATIENT CARD -->
+  <div class="card">
+    <div class="card-hd">
+      <div class="card-icon-img"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt=""></div>
+      <div class="card-title">Patient Information</div>
+    </div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Age</label>
+          <div style="display:flex;gap:6px">
+            <input type="number" id="patientAge" placeholder="5" min="0" max="120" style="flex:1">
+            <select id="ageUnit" style="width:70px">
+              <option value="years">yr</option>
+              <option value="months">mo</option>
+              <option value="days">day</option>
+            </select>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Age</label>
-              <div class="flex gap-2">
-                <input type="number" id="patientAge" placeholder="e.g. 5" min="0" max="120" style="flex:1">
-                <select id="ageUnit" style="width:72px">
-                  <option value="years">yr</option>
-                  <option value="months">mo</option>
-                  <option value="days">days</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Weight (kg)</label>
-              <input type="number" id="patientWeight" placeholder="e.g. 20" step="0.1" min="0.5" max="300">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Sex</label>
-              <select id="patientSex">
-                <option value="any">Not specified</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Route</label>
-              <select id="routePref">
-                <option value="any">Any</option>
-                <option value="oral">Oral (PO)</option>
-                <option value="iv">IV</option>
-                <option value="im">IM</option>
-                <option value="topical">Topical</option>
-              </select>
-            </div>
-          </div>
-          <div class="lab-toggle">
-            <input type="checkbox" id="labToggle" onchange="toggleLab()">
-            <label for="labToggle">Lab Values (Renal/Hepatic Adj.) <span class="lab-badge">⚗️</span></label>
-          </div>
-          <div class="lab-fields" id="labFields">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Urea (mmol/L)</label>
-                <input type="number" id="labUrea" placeholder="Norm: 2.5–7.1" step="0.1">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Creatinine (µmol/L)</label>
-                <input type="number" id="labCrea" placeholder="Norm: 60–110" step="0.1">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">ASAT (U/L)</label>
-                <input type="number" id="labASAT" placeholder="Norm: 10–40">
-              </div>
-              <div class="form-group">
-                <label class="form-label">ALAT (U/L)</label>
-                <input type="number" id="labALAT" placeholder="Norm: 7–56">
-              </div>
-            </div>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Weight (kg)</label>
+          <input type="number" id="patientWeight" placeholder="20" step="0.1" min="0.5" max="300">
         </div>
       </div>
-
-      <!-- MODE 1 -->
-      <div class="card" id="mode1-panel">
-        <div class="card-header">
-          <div class="card-icon">🔍</div>
-          <div class="card-title">Diagnosis (Mode 1)</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Sex</label>
+          <select id="patientSex">
+            <option value="any">Not specified</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </div>
-        <div class="card-body">
-          <div class="form-group">
-            <label class="form-label">Add Diagnosis</label>
-            <div class="autocomplete-wrap">
-              <input type="text" id="diagInput" placeholder="Type diagnosis... e.g. Pneumonia" oninput="filterDiagnoses(this.value)" onkeydown="diagKeydown(event)">
-              <div class="autocomplete-dropdown" id="diagDropdown"></div>
-            </div>
-            <div class="diag-tags" id="diagTags"></div>
-          </div>
-          <button class="btn btn-primary" onclick="calculateMode1()">⚡ Analyze & Calculate Doses</button>
+        <div class="form-group">
+          <label class="form-label">Route</label>
+          <select id="routePref">
+            <option value="any">Any</option>
+            <option value="oral">Oral (PO)</option>
+            <option value="iv">IV</option>
+            <option value="im">IM</option>
+          </select>
         </div>
       </div>
-
-      <!-- MODE 2 -->
-      <div class="card" id="mode2-panel" style="display:none">
-        <div class="card-header">
-          <div class="card-icon">💊</div>
-          <div class="card-title">Drug Selection (Mode 2)</div>
+      <div class="lab-toggle">
+        <input type="checkbox" id="labToggle" onchange="toggleLab()">
+        <label for="labToggle">Lab Values (Renal/Hepatic Adj.) <span class="lab-badge">⚗️</span></label>
+      </div>
+      <div class="lab-fields" id="labFields">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Urea (mmol/L)</label>
+            <input type="number" id="labUrea" placeholder="Norm: 2.5–7.1" step="0.1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Creatinine (µmol/L)</label>
+            <input type="number" id="labCrea" placeholder="Norm: 60–110" step="0.1">
+          </div>
         </div>
-        <div class="card-body">
+        <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Drug Name</label>
-            <div class="autocomplete-wrap">
-              <input type="text" id="drugInput" placeholder="Type drug name... e.g. Amoxicillin" oninput="filterDrugs(this.value)" onkeydown="drugKeydown(event)">
-              <div class="autocomplete-dropdown" id="drugDropdown"></div>
-            </div>
+            <label class="form-label">ASAT (U/L)</label>
+            <input type="number" id="labASAT" placeholder="Norm: 10–40">
           </div>
           <div class="form-group">
-            <label class="form-label">Indication (optional)</label>
-            <input type="text" id="indicationInput" placeholder="e.g. Urinary tract infection">
+            <label class="form-label">ALAT (U/L)</label>
+            <input type="number" id="labALAT" placeholder="Norm: 7–56">
           </div>
-          <button class="btn btn-primary" onclick="calculateMode2()">⚡ Calculate Dose</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <div>
-      <div class="ai-thinking" id="aiThinking">
-        <div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div>
-        <span id="aiThinkingText">AI is analyzing patient data and calculating doses...</span>
-      </div>
-      <div id="resultsPanel">
-        <div class="empty-state">
-          <div class="empty-state-icon-img"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt="MedCalc Pro"></div>
-          <div class="empty-state-text">Enter patient information and calculate doses</div>
+  <!-- MODE 1: DIAGNOSIS -->
+  <div class="card" id="mode1-panel">
+    <div class="card-hd">
+      <div class="card-icon">🔍</div>
+      <div class="card-title">Diagnosis → Drug (Mode 1)</div>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Add Diagnosis</label>
+        <div class="ac-wrap">
+          <input type="text" id="diagInput" placeholder="Type diagnosis... e.g. Pneumonia" autocomplete="off" oninput="filterDiagnoses(this.value)" onkeydown="diagKeydown(event)" onfocus="filterDiagnoses(this.value)">
+          <div class="ac-dd" id="diagDropdown"></div>
         </div>
       </div>
+      <div class="diag-tags" id="diagTags"></div>
+      <div style="margin-top:14px">
+        <button class="btn btn-primary" onclick="calculateMode1()">⚡ Analyze &amp; Calculate Doses</button>
+      </div>
     </div>
+  </div>
+
+  <!-- MODE 2: DRUG -->
+  <div class="card" id="mode2-panel" style="display:none">
+    <div class="card-hd">
+      <div class="card-icon">💊</div>
+      <div class="card-title">Drug → Dose (Mode 2)</div>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Drug Name</label>
+        <div class="ac-wrap">
+          <input type="text" id="drugInput" placeholder="Type drug... e.g. Amoxicillin" autocomplete="off" oninput="filterDrugs(this.value)" onkeydown="drugKeydown(event)" onfocus="filterDrugs(this.value)">
+          <div class="ac-dd" id="drugDropdown"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Indication (optional)</label>
+        <input type="text" id="indicationInput" placeholder="e.g. UTI">
+      </div>
+      <button class="btn btn-primary" onclick="calculateMode2()">⚡ Calculate Dose</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- RIGHT: RESULTS -->
+<div>
+  <div class="ai-thinking" id="aiThinking">
+    <div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div>
+    <span id="aiThinkingText">Calculating...</span>
+  </div>
+  <div id="resultsPanel">
+    <div class="empty-state">
+      <div class="es-icon"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt=""></div>
+      <div class="es-text">Enter patient info and calculate doses</div>
+    </div>
+  </div>
+</div>
+```
+
   </div>
 </div>
 
 <!-- HISTORY SIDEBAR -->
-<div id="historySidebar" style="display:none; position:fixed; right:0; top:0; bottom:0; width:300px; background:var(--surface); border-left:1px solid var(--border); z-index:200; overflow-y:auto; padding-top:var(--safe-top);">
-  <div style="padding:14px 18px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;">
+
+<div id="historySidebar" style="display:none;position:fixed;right:0;top:0;bottom:0;width:300px;background:var(--s1);border-left:1px solid var(--b1);z-index:300;overflow-y:auto">
+  <div style="padding:14px 18px;border-bottom:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between">
     <div style="display:flex;align-items:center;gap:8px">
-      <img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" style="width:20px;height:20px;opacity:0.7">
-      <div class="card-title">Calculation History</div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" style="width:18px;height:18px;opacity:.7">
+      <div class="card-title">History</div>
     </div>
     <button class="btn btn-secondary btn-sm" onclick="toggleHistory()">✕</button>
   </div>
   <div id="historyList"></div>
-  <div style="padding:14px;">
-    <button class="btn btn-danger btn-sm" onclick="clearHistory()" style="width:100%">🗑️ Clear All History</button>
+  <div style="padding:14px">
+    <button class="btn btn-danger btn-sm" onclick="clearHistory()" style="width:100%">🗑️ Clear All</button>
   </div>
 </div>
 
 <div class="notif" id="notif"></div>
 
 <script>
-// =====================================================
-// PWA & SERVICE WORKER REGISTRATION
-// =====================================================
-let deferredInstallPrompt = null;
-
+// ========================================================
+// PWA
+// ========================================================
+let deferredInstall = null;
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').then(reg => {
-      console.log('SW registered:', reg.scope);
-    }).catch(err => console.log('SW error:', err));
+    navigator.serviceWorker.register('./sw.js').catch(()=>{});
   });
 }
-
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault();
-  deferredInstallPrompt = e;
-  const dismissed = localStorage.getItem('pwa_install_dismissed');
-  if (!dismissed) {
+  deferredInstall = e;
+  if (!localStorage.getItem('pwa_dismissed')) {
     document.getElementById('installBanner').classList.add('show');
   }
 });
-
 window.addEventListener('appinstalled', () => {
   document.getElementById('installBanner').classList.remove('show');
-  showNotif('✅ MedCalc Pro installed successfully!');
-  deferredInstallPrompt = null;
+  showNotif('✅ MedCalc Pro installed!');
 });
-
-document.getElementById('btnInstall').addEventListener('click', async () => {
-  if (deferredInstallPrompt) {
-    deferredInstallPrompt.prompt();
-    const { outcome } = await deferredInstallPrompt.userChoice;
-    if (outcome === 'accepted') {
-      document.getElementById('installBanner').classList.remove('show');
-    }
-    deferredInstallPrompt = null;
-  } else {
-    showNotif('💡 Use browser menu → "Add to Home Screen"');
-  }
-});
-
-document.getElementById('btnDismiss').addEventListener('click', () => {
+document.getElementById('btnInstall').onclick = async () => {
+  if (deferredInstall) {
+    deferredInstall.prompt();
+    const r = await deferredInstall.userChoice;
+    if (r.outcome === 'accepted') document.getElementById('installBanner').classList.remove('show');
+    deferredInstall = null;
+  } else showNotif('💡 Browser menu → Add to Home Screen');
+};
+document.getElementById('btnDismiss').onclick = () => {
   document.getElementById('installBanner').classList.remove('show');
-  localStorage.setItem('pwa_install_dismissed', '1');
-});
-
-// Offline detection
-window.addEventListener('online', () => document.getElementById('offlineBar').classList.remove('show'));
+  localStorage.setItem('pwa_dismissed','1');
+};
+window.addEventListener('online',  () => document.getElementById('offlineBar').classList.remove('show'));
 window.addEventListener('offline', () => document.getElementById('offlineBar').classList.add('show'));
 if (!navigator.onLine) document.getElementById('offlineBar').classList.add('show');
 
-// Check URL params for mode
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('mode') === '2') setTimeout(() => switchMode(2), 100);
-
-// =====================================================
+// ========================================================
 // DRUG DATABASE
-// =====================================================
+// ========================================================
 const DRUG_DB = {
-  "Amoxicillin": { generic: "Amoxicillin trihydrate", class: "Penicillin Antibiotic", group: "Beta-lactam Antibiotics", forms: ["Oral capsule 250mg/500mg", "Oral suspension 125mg/5ml, 250mg/5ml", "IV/IM injection 500mg/1g"], standard_dose: { pediatric: 25, adult: 500, unit: "mg", per: "kg" }, dose_range: { min: 20, max: 90, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 3000, adult: 3000, unit: "mg" }, toxic_dose: 250, frequency: ["q8h", "q12h"], duration: { standard: "7-10 days", uti: "3-7 days", pneumonia: "5-7 days" }, indications: ["Pneumonia", "Otitis media", "Strep throat", "UTI", "Skin infections", "Sinusitis", "Bronchitis"], renal_adjust: { creatinine_mild: { threshold: 177, adjustment: "Normal dose" }, creatinine_moderate: { threshold: 354, adjustment: "Reduce to q12h" }, creatinine_severe: { threshold: 707, adjustment: "Reduce to q24h; max 500mg/dose" } }, hepatic_adjust: "No significant adjustment required", notes: "Take with or without food. Avoid in penicillin allergy.", interactions: ["Methotrexate", "Warfarin", "Oral contraceptives"] },
-  "Amoxicillin-Clavulanate": { generic: "Amoxicillin + Clavulanate potassium", class: "Penicillin + Beta-lactamase inhibitor", group: "Beta-lactam Antibiotics", forms: ["Oral tablet 375mg/625mg/1g", "Oral suspension 156mg/5ml, 312mg/5ml", "IV injection 1.2g/600mg"], standard_dose: { pediatric: 25, adult: 625, unit: "mg", per: "kg" }, dose_range: { min: 20, max: 90, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 3000, adult: 4000, unit: "mg" }, toxic_dose: 250, frequency: ["q8h", "q12h"], duration: { standard: "5-10 days" }, indications: ["Sinusitis", "Otitis media", "Pneumonia", "Skin infections", "Animal bites", "UTI", "COPD exacerbation"], renal_adjust: { creatinine_severe: { threshold: 354, adjustment: "Avoid if CrCl <30 ml/min; use 500mg q24h" }}, hepatic_adjust: "Use with caution; hepatotoxicity risk", notes: "Take with food to reduce GI upset.", interactions: ["Warfarin", "Allopurinol", "Methotrexate"] },
-  "Ampicillin": { generic: "Ampicillin sodium", class: "Penicillin Antibiotic", group: "Beta-lactam Antibiotics", forms: ["IV/IM injection 250mg/500mg/1g/2g", "Oral capsule 250mg/500mg", "Oral suspension 125mg/5ml"], standard_dose: { pediatric: 50, adult: 500, unit: "mg", per: "kg" }, dose_range: { min: 25, max: 200, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 12000, adult: 12000, unit: "mg" }, toxic_dose: 400, frequency: ["q4h", "q6h"], duration: { standard: "7-14 days", meningitis: "14-21 days" }, indications: ["Meningitis", "Septicemia", "Endocarditis", "Pneumonia", "UTI", "Listeriosis"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "q8-12h" }, creatinine_severe: { threshold: 707, adjustment: "q12-24h" }}, hepatic_adjust: "No significant adjustment", notes: "IV infusion over 15-30 min. Incompatible with aminoglycosides.", interactions: ["Aminoglycosides (physical incompatibility)", "Allopurinol"] },
-  "Ceftriaxone": { generic: "Ceftriaxone sodium", class: "3rd Gen Cephalosporin", group: "Cephalosporin Antibiotics", forms: ["IV/IM injection 250mg/500mg/1g/2g powder"], standard_dose: { pediatric: 50, adult: 1000, unit: "mg", per: "kg" }, dose_range: { min: 25, max: 100, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 4000, adult: 4000, unit: "mg" }, toxic_dose: 200, frequency: ["q12h", "q24h"], duration: { standard: "7-14 days", meningitis: "14-21 days", typhoid: "5-7 days" }, indications: ["Meningitis", "Pneumonia", "Typhoid fever", "Gonorrhea", "Septicemia", "Pelvic inflammatory disease", "Lyme disease"], renal_adjust: { note: "Generally safe; avoid in combined severe hepatic+renal failure" }, hepatic_adjust: "Reduce dose if severe hepatic+renal impairment combined", notes: "Do NOT mix with calcium IV solutions. Reconstitute with 1% lidocaine for IM.", interactions: ["Calcium IV solutions (neonates: FATAL)", "Warfarin"] },
-  "Cefazolin": { generic: "Cefazolin sodium", class: "1st Gen Cephalosporin", group: "Cephalosporin Antibiotics", forms: ["IV/IM injection 500mg/1g/2g"], standard_dose: { pediatric: 25, adult: 1000, unit: "mg", per: "kg" }, dose_range: { min: 25, max: 100, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 6000, adult: 6000, unit: "mg" }, toxic_dose: 150, frequency: ["q8h"], duration: { standard: "5-10 days", surgical_prophylaxis: "Single dose" }, indications: ["Skin/soft tissue infections", "Surgical prophylaxis", "UTI", "Pneumonia", "Bone infections", "Endocarditis"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "q12h" }, creatinine_severe: { threshold: 707, adjustment: "q24h, reduce dose 50%" }}, hepatic_adjust: "No significant adjustment", notes: "1st choice for surgical prophylaxis", interactions: ["Probenecid"] },
-  "Gentamicin": { generic: "Gentamicin sulfate", class: "Aminoglycoside", group: "Aminoglycoside Antibiotics", forms: ["IV/IM injection 10mg/ml, 40mg/ml", "Topical eye/ear drops"], standard_dose: { pediatric: 5, adult: 5, unit: "mg", per: "kg" }, dose_range: { min: 3, max: 7.5, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 300, adult: 360, unit: "mg" }, toxic_dose: 10, frequency: ["q8h", "q24h (once-daily preferred)"], duration: { standard: "5-7 days" }, indications: ["Septicemia", "Pneumonia", "UTI", "Meningitis (adjunct)", "Peritonitis", "Endocarditis (synergy)"], renal_adjust: { creatinine_mild: { threshold: 177, adjustment: "q12h" }, creatinine_moderate: { threshold: 354, adjustment: "q24-36h, monitor levels" }, creatinine_severe: { threshold: 707, adjustment: "q48h or longer; serial monitoring required" }}, hepatic_adjust: "No hepatic adjustment", notes: "⚠️ NEPHROTOXIC & OTOTOXIC. Monitor serum levels (peak <10, trough <2 µg/ml). Hydrate well.", interactions: ["Furosemide (ototoxicity)", "Vancomycin (nephrotoxicity)", "NSAIDs"] },
-  "Metronidazole": { generic: "Metronidazole", class: "Nitroimidazole Antibiotic", group: "Antiprotozoal / Anaerobic Antibiotic", forms: ["Oral tablet 200mg/400mg/500mg", "IV infusion 500mg/100ml", "Suppository 500mg/1g", "Topical gel/cream"], standard_dose: { pediatric: 7.5, adult: 400, unit: "mg", per: "kg" }, dose_range: { min: 7.5, max: 30, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 4000, adult: 4000, unit: "mg" }, toxic_dose: 60, frequency: ["q8h"], duration: { standard: "5-7 days", amoeba: "10 days", c_diff: "10 days" }, indications: ["Amoebiasis", "Giardiasis", "C. difficile colitis", "Bacterial vaginosis", "Trichomonas", "Anaerobic infections", "H. pylori (combination)", "Dental infections"], renal_adjust: { note: "No significant adjustment for mild-moderate renal impairment" }, hepatic_adjust: "Reduce dose 50% in severe hepatic impairment (Child-Pugh C)", notes: "⚠️ Avoid alcohol (disulfiram-like reaction). Metallic taste, neuropathy with prolonged use.", interactions: ["Alcohol", "Warfarin", "Lithium", "Phenytoin"] },
-  "Ciprofloxacin": { generic: "Ciprofloxacin hydrochloride", class: "Fluoroquinolone", group: "Quinolone Antibiotics", forms: ["Oral tablet 250mg/500mg/750mg", "IV infusion 200mg/400mg", "Eye drops 0.3%"], standard_dose: { pediatric: 10, adult: 500, unit: "mg", per: "kg" }, dose_range: { min: 10, max: 40, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 1500, adult: 1500, unit: "mg" }, toxic_dose: 80, frequency: ["q12h"], duration: { standard: "7-14 days", uti: "3-7 days" }, indications: ["UTI", "Typhoid fever", "Traveller's diarrhea", "Pneumonia (atypical)", "Anthrax", "Gonorrhea", "Osteomyelitis"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "Reduce dose 50%" }, creatinine_severe: { threshold: 707, adjustment: "250-500mg q24h" }}, hepatic_adjust: "Use with caution in severe hepatic impairment", notes: "⚠️ Avoid in children <18 unless benefit outweighs risk. Avoid dairy 2h before/after dose.", interactions: ["Antacids (reduce absorption)", "Theophylline", "Warfarin", "NSAIDs (seizure risk)"] },
-  "Doxycycline": { generic: "Doxycycline hyclate / monohydrate", class: "Tetracycline Antibiotic", group: "Tetracycline Antibiotics", forms: ["Oral capsule/tablet 50mg/100mg", "IV injection 100mg/200mg"], standard_dose: { pediatric: 2.2, adult: 100, unit: "mg", per: "kg" }, dose_range: { min: 2.2, max: 4.4, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 200, adult: 200, unit: "mg" }, toxic_dose: 10, frequency: ["q12h", "q24h"], duration: { standard: "7-14 days" }, indications: ["Malaria", "Chlamydia", "Lyme disease", "Acne", "MRSA skin infections", "Rickettsia", "Brucellosis", "Pneumonia (atypical)"], renal_adjust: { note: "Safe in renal impairment; preferred tetracycline in renal disease" }, hepatic_adjust: "Use with caution; dose reduction in severe hepatic disease", notes: "⚠️ Avoid in children <8 years (tooth discoloration) and pregnancy. Take with full glass of water.", interactions: ["Antacids", "Dairy products", "Warfarin", "Oral contraceptives", "Retinoids"] },
-  "Azithromycin": { generic: "Azithromycin dihydrate", class: "Macrolide Antibiotic", group: "Macrolide Antibiotics", forms: ["Oral tablet 250mg/500mg", "Oral suspension 100mg/5ml, 200mg/5ml", "IV injection 500mg"], standard_dose: { pediatric: 10, adult: 500, unit: "mg", per: "kg" }, dose_range: { min: 5, max: 12, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 500, adult: 500, unit: "mg" }, toxic_dose: 30, frequency: ["q24h"], duration: { standard: "3-5 days", chlamydia: "Single dose 1g" }, indications: ["Community-acquired pneumonia", "Pharyngitis (penicillin allergy)", "Skin infections", "Chlamydia", "MAC prophylaxis (HIV)", "Pertussis"], renal_adjust: { note: "No dose adjustment in mild-moderate renal impairment" }, hepatic_adjust: "Use with caution in severe hepatic impairment", notes: "Long tissue half-life (68h). Z-pack = 500mg day 1, then 250mg days 2-5.", interactions: ["QT-prolonging drugs", "Warfarin", "Cyclosporine", "Digoxin"] },
-  "Vancomycin": { generic: "Vancomycin hydrochloride", class: "Glycopeptide Antibiotic", group: "Glycopeptide Antibiotics", forms: ["IV infusion powder 500mg/1g", "Oral capsule 125mg/250mg (C. diff only)"], standard_dose: { pediatric: 15, adult: 15, unit: "mg", per: "kg" }, dose_range: { min: 40, max: 60, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 4000, adult: 4500, unit: "mg" }, toxic_dose: 80, frequency: ["q6h", "q8h", "q12h (by renal function)"], duration: { standard: "7-14 days", endocarditis: "4-6 weeks" }, indications: ["MRSA", "C. difficile colitis (oral)", "Endocarditis", "Meningitis (MRSA)", "Prosthetic device infections"], renal_adjust: { creatinine_mild: { threshold: 177, adjustment: "q12h, target trough 10-15 mg/L" }, creatinine_moderate: { threshold: 354, adjustment: "q24-48h, monitor levels closely" }, creatinine_severe: { threshold: 707, adjustment: "Based on levels only; consider continuous infusion" }}, hepatic_adjust: "No significant adjustment", notes: "⚠️ NEPHROTOXIC. Infuse over ≥60 min (Red Man Syndrome if too fast). Target AUC:MIC 400-600.", interactions: ["Aminoglycosides (nephrotoxicity)", "Loop diuretics", "NSAIDs"] },
-  "Meropenem": { generic: "Meropenem trihydrate", class: "Carbapenem", group: "Carbapenem Antibiotics", forms: ["IV injection 500mg/1g powder"], standard_dose: { pediatric: 20, adult: 1000, unit: "mg", per: "kg" }, dose_range: { min: 10, max: 40, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 6000, adult: 6000, unit: "mg" }, toxic_dose: 120, frequency: ["q8h"], duration: { standard: "7-14 days", meningitis: "21 days" }, indications: ["Septicemia", "Meningitis", "Peritonitis", "Febrile neutropenia", "HAP/VAP"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "Reduce dose 50%, q12h" }, creatinine_severe: { threshold: 707, adjustment: "Use 500mg q24h" }}, hepatic_adjust: "No significant adjustment", notes: "Reserve for resistant infections. IV infusion over 30 min (or 3h extended infusion for MDR).", interactions: ["Valproate (reduces levels)", "Probenecid"] },
-  "Artemether-Lumefantrine": { generic: "Artemether + Lumefantrine", class: "Artemisinin Combination Therapy", group: "Antimalarial Drugs", forms: ["Oral tablet 20mg/120mg", "Oral tablet 40mg/240mg"], standard_dose: { pediatric_weight_based: true, adult: 4, unit: "tablets per dose", per: "weight_band" }, weight_bands: [{ min: 5, max: 14.9, tablets: 1, times: 6 }, { min: 15, max: 24.9, tablets: 2, times: 6 }, { min: 25, max: 34.9, tablets: 3, times: 6 }, { min: 35, max: 999, tablets: 4, times: 6 }], dose_range: { adult: "4 tablets" }, max_dose_per_day: { adult: 8, unit: "tablets" }, toxic_dose: "N/A", frequency: ["0h, 8h, 24h, 36h, 48h, 60h (6 doses)"], duration: { standard: "3 days (6 doses)" }, indications: ["Uncomplicated P. falciparum malaria", "Mixed malaria infection"], renal_adjust: { note: "No dose adjustment required" }, hepatic_adjust: "Use with caution in severe hepatic impairment", notes: "Take with food (fatty meal improves absorption). Avoid 1st trimester. QT monitoring required.", interactions: ["QT-prolonging drugs", "CYP3A4 inhibitors"] },
-  "Artesunate": { generic: "Artesunate", class: "Artemisinin derivative", group: "Antimalarial Drugs", forms: ["IV/IM injection 60mg/120mg powder", "Rectal suppository 50mg/100mg/200mg/400mg"], standard_dose: { pediatric: 3, adult: 2.4, unit: "mg", per: "kg" }, dose_range: { min: 2.4, max: 3.2, unit: "mg/kg per dose" }, max_dose_per_day: { adult: 480, unit: "mg" }, toxic_dose: 10, frequency: ["0h, 12h, 24h, then q24h"], duration: { standard: "Min 3 days IV, then switch to oral" }, indications: ["Severe/complicated malaria", "Cerebral malaria", "High parasitemia"], renal_adjust: { note: "No significant adjustment" }, hepatic_adjust: "No significant adjustment", notes: "FIRST-LINE for severe malaria (WHO). Monitor for post-artesunate delayed hemolysis.", interactions: ["Limited significant interactions"] },
-  "Albendazole": { generic: "Albendazole", class: "Benzimidazole Anthelmintic", group: "Antiparasitic Drugs", forms: ["Oral tablet 400mg", "Oral suspension 100mg/5ml, 200mg/5ml"], standard_dose: { pediatric: 400, adult: 400, unit: "mg", per: "flat dose" }, dose_range: { fixed_dose: "400mg single or 400mg BD x3 days" }, max_dose_per_day: { pediatric: 800, adult: 800, unit: "mg" }, toxic_dose: 40, frequency: ["Single dose", "q12h for 3 days (tissue infections)"], duration: { standard: "1-3 days", neurocysticercosis: "8-30 days (cycles)", hydatid: "28 days on/14 off x3" }, indications: ["Ascariasis", "Hookworm", "Pinworm", "Trichuriasis", "Neurocysticercosis", "Hydatid disease", "Giardia"], renal_adjust: { note: "No adjustment needed" }, hepatic_adjust: "Monitor LFTs; use with caution in hepatic disease", notes: "Take with fatty meal. Children <2yr: 200mg.", interactions: ["Praziquantel (increases levels)", "Dexamethasone", "Cimetidine"] },
-  "Mebendazole": { generic: "Mebendazole", class: "Benzimidazole Anthelmintic", group: "Antiparasitic Drugs", forms: ["Oral tablet 100mg/500mg", "Oral suspension 100mg/5ml"], standard_dose: { pediatric: 100, adult: 100, unit: "mg", per: "flat dose" }, dose_range: { fixed_dose: "100mg BD x3 days, or 500mg single dose" }, max_dose_per_day: { adult: 1000, unit: "mg" }, toxic_dose: 50, frequency: ["q12h x3 days or single dose"], duration: { standard: "1-3 days" }, indications: ["Roundworm", "Hookworm", "Pinworm", "Whipworm", "Trichinella"], renal_adjust: { note: "No adjustment needed" }, hepatic_adjust: "Avoid in severe hepatic disease", notes: "Can be chewed, swallowed, or crushed with food.", interactions: ["Cimetidine"] },
-  "Acyclovir": { generic: "Acyclovir (Aciclovir)", class: "Nucleoside Analogue Antiviral", group: "Antiviral Drugs", forms: ["Oral tablet 200mg/400mg/800mg", "IV injection 250mg/500mg powder", "Topical cream 5%"], standard_dose: { pediatric: 15, adult: 400, unit: "mg", per: "kg" }, dose_range: { min: 5, max: 20, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 3000, adult: 4800, unit: "mg" }, toxic_dose: 80, frequency: ["q8h (HSV encephalitis)", "q4h 5x/day (cold sores)"], duration: { standard: "7-10 days", neonatal_hsv: "21 days IV", zoster: "7 days" }, indications: ["Herpes simplex (HSV)", "Varicella-zoster (chickenpox/shingles)", "HSV encephalitis", "Neonatal HSV"], renal_adjust: { creatinine_mild: { threshold: 177, adjustment: "q12h IV" }, creatinine_moderate: { threshold: 354, adjustment: "q24h IV, reduce oral" }, creatinine_severe: { threshold: 707, adjustment: "Reduce 50-75%; q24h" }}, hepatic_adjust: "No significant adjustment", notes: "Hydrate well during IV (crystalluria risk). Infuse IV over ≥60 min.", interactions: ["Probenecid (increases levels)", "Nephrotoxic drugs"] },
-  "Fluconazole": { generic: "Fluconazole", class: "Triazole Antifungal", group: "Antifungal Drugs", forms: ["Oral capsule 50mg/100mg/150mg/200mg", "IV infusion 200mg/400mg"], standard_dose: { pediatric: 6, adult: 150, unit: "mg", per: "kg" }, dose_range: { min: 3, max: 12, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 800, adult: 800, unit: "mg" }, toxic_dose: 40, frequency: ["q24h", "Single dose 150mg (vaginal candidiasis)"], duration: { standard: "14 days", vaginal_candida: "Single dose", cryptococcal_meningitis: "6-8 weeks" }, indications: ["Candidiasis", "Cryptococcal meningitis", "Oropharyngeal candidiasis", "Vaginal candidiasis", "Tinea infections"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "q48h" }, creatinine_severe: { threshold: 707, adjustment: "Reduce 50%, q48h" }}, hepatic_adjust: "Use with caution; monitor LFTs", notes: "QTc prolongation risk. Check interactions carefully.", interactions: ["Warfarin (major)", "Tacrolimus", "Phenytoin", "QT-prolonging drugs"] },
-  "Paracetamol": { generic: "Paracetamol (Acetaminophen)", class: "Analgesic / Antipyretic", group: "Non-opioid Analgesics", forms: ["Oral tablet 325mg/500mg", "Oral suspension 120mg/5ml, 250mg/5ml", "Suppository 125mg/250mg/500mg", "IV infusion 10mg/ml"], standard_dose: { pediatric: 15, adult: 500, unit: "mg", per: "kg" }, dose_range: { min: 10, max: 15, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 60, adult: 4000, unit: "mg" }, toxic_dose: 150, frequency: ["q4-6h"], duration: { standard: "Up to 5-7 days OTC" }, indications: ["Fever", "Mild-moderate pain", "Headache", "Post-operative pain", "Musculoskeletal pain"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "q6h" }, creatinine_severe: { threshold: 707, adjustment: "q8h" }}, hepatic_adjust: "⚠️ REDUCE DOSE. Max 2g/day in chronic alcoholism. AVOID in severe hepatic failure.", notes: "⚠️ HEPATOTOXIC in overdose. N-acetylcysteine is antidote. Safest analgesic in renal disease.", interactions: ["Warfarin (mild INR increase)", "Alcohol (hepatotoxicity)", "Rifampicin"] },
-  "Ibuprofen": { generic: "Ibuprofen", class: "NSAID / Analgesic / Antipyretic", group: "NSAIDs", forms: ["Oral tablet 200mg/400mg/600mg/800mg", "Oral suspension 100mg/5ml", "Topical gel 5%"], standard_dose: { pediatric: 5, adult: 400, unit: "mg", per: "kg" }, dose_range: { min: 5, max: 10, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 40, adult: 2400, unit: "mg" }, toxic_dose: 100, frequency: ["q6-8h"], duration: { standard: "5-7 days" }, indications: ["Fever", "Pain", "Inflammation", "Arthritis", "Dysmenorrhea", "Gout"], renal_adjust: { creatinine_moderate: { threshold: 177, adjustment: "Avoid if CrCl <30; caution 30-60" }, creatinine_severe: { threshold: 354, adjustment: "⚠️ AVOID — acute kidney injury risk" }}, hepatic_adjust: "Avoid in severe hepatic disease", notes: "⚠️ Avoid in <3 months, renal impairment, GI bleed, heart failure. Take with food.", interactions: ["ACE inhibitors/ARBs (renal toxicity)", "Warfarin", "Aspirin", "Lithium", "Digoxin"] },
-  "Dexamethasone": { generic: "Dexamethasone sodium phosphate", class: "Corticosteroid", group: "Corticosteroids", forms: ["IV/IM injection 4mg/ml, 8mg/2ml", "Oral tablet 0.5mg/1mg/2mg/4mg", "Eye drops 0.1%"], standard_dose: { pediatric: 0.15, adult: 8, unit: "mg", per: "kg" }, dose_range: { min: 0.1, max: 0.6, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 10, adult: 40, unit: "mg" }, toxic_dose: 2, frequency: ["q6h (anti-inflammatory)", "q12h (meningitis)"], duration: { standard: "3-5 days", meningitis: "4 days", croup: "Single dose" }, indications: ["Croup", "Meningitis", "Severe asthma", "Anaphylaxis", "Cerebral edema", "Severe COVID-19", "Anti-emetic"], renal_adjust: { note: "Monitor fluid/electrolytes" }, hepatic_adjust: "May need reduction in severe hepatic disease", notes: "Potency: 6-7x prednisolone. Suppresses HPA axis. Monitor blood glucose.", interactions: ["NSAIDs (GI bleed)", "Warfarin", "Insulin/OHAs", "Live vaccines"] },
-  "Prednisolone": { generic: "Prednisolone", class: "Corticosteroid", group: "Corticosteroids", forms: ["Oral tablet 1mg/5mg/25mg", "Oral solution 5mg/5ml"], standard_dose: { pediatric: 1, adult: 40, unit: "mg", per: "kg" }, dose_range: { min: 0.5, max: 2, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 60, adult: 60, unit: "mg" }, toxic_dose: 5, frequency: ["q24h (morning)", "q12h (high dose)"], duration: { standard: "3-5 days", asthma: "3-5 days" }, indications: ["Asthma exacerbation", "Croup", "Nephrotic syndrome", "Allergic rhinitis", "Autoimmune disease"], renal_adjust: { note: "Use with caution; fluid retention risk" }, hepatic_adjust: "Preferred over prednisone in hepatic disease", notes: "Take in morning with food. Taper if >2 weeks.", interactions: ["NSAIDs", "Antidiabetics", "Warfarin", "Live vaccines"] },
-  "Salbutamol": { generic: "Salbutamol (Albuterol)", class: "Beta-2 Agonist Bronchodilator", group: "Bronchodilators", forms: ["MDI inhaler 100mcg/puff", "Nebulizer solution 2.5mg/2.5ml, 5mg/2.5ml", "Oral syrup 2mg/5ml"], standard_dose: { pediatric: 0.1, adult: 2.5, unit: "mg", per: "kg" }, dose_range: { nebulizer: "0.15mg/kg (min 2.5mg, max 5mg)", inhaler: "2-4 puffs per dose" }, max_dose_per_day: { pediatric: 5, adult: 40, unit: "mg" }, toxic_dose: 1, frequency: ["q20min x3 (acute), then q4-6h"], duration: { standard: "As needed" }, indications: ["Asthma", "Bronchospasm", "COPD exacerbation", "Hyperkalemia (adjunct)"], renal_adjust: { note: "No significant adjustment" }, hepatic_adjust: "No adjustment required", notes: "Monitor HR and K+. Tachycardia common. Use spacer with MDI in children.", interactions: ["Beta-blockers (antagonism)", "Digoxin", "Loop diuretics (hypokalemia)"] },
-  "Chlorpheniramine": { generic: "Chlorphenamine maleate", class: "1st Gen H1 Antihistamine", group: "Antihistamines", forms: ["Oral tablet 4mg", "Oral syrup 2mg/5ml", "IV/IM injection 10mg/ml"], standard_dose: { pediatric: 0.1, adult: 4, unit: "mg", per: "kg" }, dose_range: { min: 0.1, max: 0.35, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 12, adult: 24, unit: "mg" }, toxic_dose: 5, frequency: ["q6h"], duration: { standard: "5-7 days" }, indications: ["Allergic rhinitis", "Urticaria", "Anaphylaxis (adjunct)", "Hay fever", "Pruritus", "Insect bites"], renal_adjust: { note: "Use with caution in renal impairment" }, hepatic_adjust: "Reduce dose in severe hepatic disease", notes: "Causes sedation. Avoid in glaucoma, BPH. Avoid driving.", interactions: ["CNS depressants", "Alcohol", "MAOIs", "Anticholinergics"] },
-  "Cetirizine": { generic: "Cetirizine hydrochloride", class: "2nd Gen H1 Antihistamine", group: "Antihistamines", forms: ["Oral tablet 5mg/10mg", "Oral syrup 5mg/5ml"], standard_dose: { pediatric: 0.25, adult: 10, unit: "mg", per: "kg" }, dose_range: { min: 0.1, max: 0.4, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 10, adult: 10, unit: "mg" }, toxic_dose: 3, frequency: ["q24h"], duration: { standard: "As needed or daily" }, indications: ["Allergic rhinitis", "Chronic urticaria", "Pruritus", "Hay fever"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "5mg q24h" }, creatinine_severe: { threshold: 707, adjustment: "Avoid or 5mg q48h" }}, hepatic_adjust: "Use with caution in severe hepatic disease", notes: "Less sedating than 1st gen. Age >2yr: 2.5-5mg/day.", interactions: ["CNS depressants (additive)", "Ritonavir"] },
-  "Omeprazole": { generic: "Omeprazole", class: "Proton Pump Inhibitor", group: "Gastrointestinal Drugs", forms: ["Oral capsule/tablet 10mg/20mg/40mg", "IV injection 40mg powder"], standard_dose: { pediatric: 1, adult: 20, unit: "mg", per: "kg" }, dose_range: { min: 0.5, max: 2, unit: "mg/kg/day" }, max_dose_per_day: { pediatric: 40, adult: 40, unit: "mg" }, toxic_dose: 10, frequency: ["q24h (30 min before meal)", "q12h (high dose)"], duration: { standard: "4-8 weeks", h_pylori: "7-14 days" }, indications: ["GERD", "Peptic ulcer", "H. pylori eradication", "Zollinger-Ellison syndrome", "NSAID-induced gastropathy"], renal_adjust: { note: "No significant adjustment" }, hepatic_adjust: "Max 20mg/day in severe hepatic impairment", notes: "Take 30-60 min before meals. Swallow whole, do not crush.", interactions: ["Clopidogrel (reduced efficacy)", "Methotrexate", "Atazanavir"] },
-  "ORS": { generic: "Oral Rehydration Salts", class: "Rehydration Solution", group: "Electrolyte Solutions", forms: ["Powder sachet for oral solution", "Ready-to-use solution"], standard_dose: { note: "Weight-based fluid calculation" }, ors_guide: { mild_dehydration: "50ml/kg over 4h", moderate_dehydration: "100ml/kg over 4h", maintenance: "10ml/kg/stool, 2ml/kg/vomit" }, frequency: ["Sip frequently"], duration: { standard: "Until dehydration corrected" }, indications: ["Dehydration", "Diarrhea", "Gastroenteritis", "Vomiting", "Cholera"], notes: "WHO ORS: Na 75, K 20, Cl 65, citrate 10, glucose 75 mmol/L.", interactions: [] },
-  "Furosemide": { generic: "Furosemide (Frusemide)", class: "Loop Diuretic", group: "Diuretics", forms: ["Oral tablet 20mg/40mg/80mg", "IV/IM injection 10mg/ml"], standard_dose: { pediatric: 1, adult: 40, unit: "mg", per: "kg" }, dose_range: { min: 0.5, max: 2, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 6, adult: 600, unit: "mg" }, toxic_dose: 6, frequency: ["q6-12h"], duration: { standard: "As clinically indicated" }, indications: ["Edema", "Heart failure", "Hypertension", "Nephrotic syndrome", "Pulmonary edema"], renal_adjust: { note: "Higher doses may be needed; monitor electrolytes" }, hepatic_adjust: "Risk of hepatic encephalopathy due to K+ depletion", notes: "Monitor electrolytes (K+, Na+, Mg2+). Ototoxicity at high IV doses.", interactions: ["Aminoglycosides (ototoxicity)", "NSAIDs", "ACE inhibitors", "Lithium"] },
-  "Phenobarbital": { generic: "Phenobarbital (Phenobarbitone)", class: "Barbiturate Anticonvulsant", group: "Antiepileptic Drugs", forms: ["Oral tablet 15mg/30mg/60mg/100mg", "IV/IM injection 200mg/ml"], standard_dose: { loading: 20, maintenance: 5, unit: "mg", per: "kg" }, dose_range: { loading: "20mg/kg IV (status epilepticus)", maintenance: "3-5mg/kg/day" }, max_dose_per_day: { pediatric: 300, adult: 300, unit: "mg" }, toxic_dose: 40, frequency: ["q24h (maintenance)", "Single loading dose"], duration: { standard: "Ongoing for epilepsy" }, indications: ["Neonatal seizures", "Status epilepticus", "Epilepsy (all types)", "Febrile seizures"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "Reduce dose" }}, hepatic_adjust: "Reduce dose in severe hepatic disease", notes: "Therapeutic level 15-40 mcg/ml. Sedation, respiratory depression risk.", interactions: ["CNS depressants", "Warfarin", "Phenytoin", "Valproate"] },
-  "Diazepam": { generic: "Diazepam", class: "Benzodiazepine", group: "Benzodiazepines", forms: ["Oral tablet 2mg/5mg/10mg", "IV/IM injection 5mg/ml", "Rectal solution/gel 5mg/2.5ml, 10mg/2.5ml"], standard_dose: { pediatric: 0.3, adult: 5, unit: "mg", per: "kg" }, dose_range: { min: 0.2, max: 0.5, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 10, adult: 40, unit: "mg" }, toxic_dose: 2, frequency: ["Single dose acute", "q8-12h for anxiety"], duration: { standard: "Short-term (2-4 weeks max for anxiety)" }, indications: ["Status epilepticus", "Seizures (acute)", "Anxiety", "Alcohol withdrawal", "Muscle spasm"], renal_adjust: { note: "Use with caution; reduce in severe renal impairment" }, hepatic_adjust: "Reduce significantly; prolonged half-life", notes: "⚠️ DEPENDENCE risk. Respiratory depression. Have flumazenil available.", interactions: ["CNS depressants", "Alcohol", "Opioids (respiratory depression)"] },
-  "Vitamin A": { generic: "Retinol / Vitamin A", class: "Fat-soluble Vitamin", group: "Vitamins & Supplements", forms: ["Oral capsule 25,000IU/50,000IU/200,000IU"], dose_range: { age_based: [{ label: "<6 months", dose: "50,000 IU" }, { label: "6-11 months", dose: "100,000 IU" }, { label: "12 months+", dose: "200,000 IU" }] }, frequency: ["Single dose", "Repeat after 24h in deficiency"], duration: { standard: "1-3 doses" }, indications: ["Measles", "Vitamin A deficiency", "Xerophthalmia", "Night blindness", "Malnutrition"], notes: "⚠️ TERATOGENIC in pregnancy at high doses.", interactions: ["Retinoids (additive toxicity)", "Cholestyramine"] },
-  "Zinc": { generic: "Zinc sulfate / Zinc acetate / Zinc gluconate", class: "Trace Mineral", group: "Vitamins & Supplements", forms: ["Oral tablet 20mg elemental zinc", "Oral syrup 10mg/5ml"], standard_dose: { under6months: 10, over6months: 20, adult: 20, unit: "mg", per: "flat dose" }, frequency: ["q24h x10-14 days"], duration: { standard: "10-14 days" }, indications: ["Diarrhea treatment", "Zinc deficiency", "Prevention of diarrhea recurrence"], notes: "WHO recommends zinc with ORS for diarrhea in children.", interactions: ["Fluoroquinolones", "Iron"] },
-  "Insulin Regular": { generic: "Human Insulin Regular (Short-acting)", class: "Short-acting Insulin", group: "Antidiabetic Drugs", forms: ["SC/IV injection 100 IU/ml", "Pen cartridge 100 IU/ml"], standard_dose: { note: "Dose highly individualized" }, dose_range: { iv_infusion: "0.05-0.1 IU/kg/h (DKA)", sc_correction: "1 IU per 50 mg/dL above target" }, frequency: ["q6h (SC)", "Continuous IV infusion (DKA)"], duration: { standard: "As clinically needed" }, indications: ["Diabetes mellitus type 1&2", "DKA", "Hyperkalemia", "TPN"], renal_adjust: { note: "Reduce dose; risk of hypoglycemia" }, hepatic_adjust: "Reduce in hepatic disease", notes: "⚠️ HYPOGLYCEMIA risk. Always verify dose. U-100 strength.", interactions: ["Beta-blockers (mask hypoglycemia)", "Corticosteroids", "Thiazides"] },
-  "Tramadol": { generic: "Tramadol hydrochloride", class: "Weak Opioid / SNRI", group: "Opioid Analgesics", forms: ["Oral capsule 50mg/100mg", "IV/IM injection 50mg/ml"], standard_dose: { pediatric: 1, adult: 50, unit: "mg", per: "kg" }, dose_range: { min: 1, max: 2, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 400, adult: 400, unit: "mg" }, toxic_dose: 8, frequency: ["q4-6h"], duration: { standard: "Short-term for acute pain" }, indications: ["Moderate to severe pain", "Post-operative pain", "Cancer pain", "Neuropathic pain"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "q12h, max 200mg/day" }, creatinine_severe: { threshold: 707, adjustment: "AVOID or max 50mg q12h" }}, hepatic_adjust: "Reduce dose and frequency in severe hepatic impairment", notes: "⚠️ SEIZURE RISK. Serotonin syndrome risk. NOT recommended <12 years.", interactions: ["MAOIs (CONTRAINDICATED)", "SSRIs (serotonin syndrome)", "Carbamazepine"] },
-  "Morphine": { generic: "Morphine sulfate", class: "Strong Opioid Analgesic", group: "Opioid Analgesics", forms: ["Oral tablet 10mg/20mg/30mg (IR&ER)", "Oral solution 10mg/5ml", "IV/SC/IM injection 1mg/ml, 10mg/ml"], standard_dose: { pediatric: 0.1, adult: 2, unit: "mg", per: "kg" }, dose_range: { min: 0.05, max: 0.2, unit: "mg/kg per dose" }, max_dose_per_day: { pediatric: 30, adult: 200, unit: "mg" }, toxic_dose: 1, frequency: ["q3-4h (IR)", "q8-12h (ER)"], duration: { standard: "As clinically required" }, indications: ["Severe pain", "Cancer pain", "Post-operative pain", "Palliative care", "Acute pulmonary edema"], renal_adjust: { creatinine_moderate: { threshold: 354, adjustment: "Reduce 25%, q6h" }, creatinine_severe: { threshold: 707, adjustment: "Reduce 50%; AVOID metabolite accumulation" }}, hepatic_adjust: "Significant reduction in severe hepatic impairment", notes: "⚠️ Respiratory depression. Have naloxone available. Controlled substance.", interactions: ["CNS depressants", "MAOIs", "Benzodiazepines"] }
+  "Amoxicillin":{"generic":"Amoxicillin trihydrate","class":"Penicillin Antibiotic","group":"Beta-lactam Antibiotics","forms":["Oral capsule 250mg/500mg","Oral suspension 125mg/5ml, 250mg/5ml","IV/IM injection 500mg/1g"],"standard_dose":{"pediatric":25,"adult":500,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":3000,"adult":3000},"toxic_dose":250,"frequency":["q8h","q12h"],"duration":{"standard":"7-10 days"},"indications":["Pneumonia","Otitis media","Strep throat","UTI","Skin infections","Sinusitis","Bronchitis"],"renal_adjust":{"creatinine_mild":{"threshold":177,"adjustment":"Normal dose"},"creatinine_moderate":{"threshold":354,"adjustment":"Reduce to q12h"},"creatinine_severe":{"threshold":707,"adjustment":"q24h; max 500mg/dose"}},"hepatic_adjust":"No significant adjustment","notes":"Take with or without food. Avoid in penicillin allergy.","interactions":["Methotrexate","Warfarin","Oral contraceptives"]},
+  "Amoxicillin-Clavulanate":{"generic":"Amoxicillin + Clavulanate","class":"Penicillin + Beta-lactamase inhibitor","group":"Beta-lactam Antibiotics","forms":["Oral tablet 375mg/625mg/1g","Oral suspension 156mg/5ml, 312mg/5ml","IV injection 1.2g"],"standard_dose":{"pediatric":25,"adult":625,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":3000,"adult":4000},"toxic_dose":250,"frequency":["q8h","q12h"],"duration":{"standard":"5-10 days"},"indications":["Sinusitis","Otitis media","Pneumonia","Skin infections","Animal bites","UTI","COPD exacerbation"],"renal_adjust":{"creatinine_severe":{"threshold":354,"adjustment":"Avoid if CrCl <30; use 500mg q24h"}},"hepatic_adjust":"Use with caution; hepatotoxicity risk","notes":"Take with food. GI upset common.","interactions":["Warfarin","Allopurinol","Methotrexate"]},
+  "Ampicillin":{"generic":"Ampicillin sodium","class":"Penicillin Antibiotic","group":"Beta-lactam Antibiotics","forms":["IV/IM injection 250mg/500mg/1g/2g","Oral capsule 250mg/500mg"],"standard_dose":{"pediatric":50,"adult":500,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":12000,"adult":12000},"toxic_dose":400,"frequency":["q6h","q4h"],"duration":{"standard":"7-14 days"},"indications":["Meningitis","Septicemia","Endocarditis","Pneumonia","UTI","Listeriosis"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"q8-12h"},"creatinine_severe":{"threshold":707,"adjustment":"q12-24h"}},"hepatic_adjust":"No significant adjustment","notes":"IV infusion over 15-30 min. Incompatible with aminoglycosides.","interactions":["Aminoglycosides (incompatible)","Allopurinol"]},
+  "Ceftriaxone":{"generic":"Ceftriaxone sodium","class":"3rd Gen Cephalosporin","group":"Cephalosporin Antibiotics","forms":["IV/IM injection 250mg/500mg/1g/2g powder"],"standard_dose":{"pediatric":50,"adult":1000,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":4000,"adult":4000},"toxic_dose":200,"frequency":["q24h","q12h"],"duration":{"standard":"7-14 days"},"indications":["Meningitis","Pneumonia","Typhoid fever","Gonorrhea","Septicemia","Lyme disease"],"renal_adjust":{"note":"Safe; avoid combined severe hepatic+renal failure"},"hepatic_adjust":"Reduce in combined hepatic+renal failure","notes":"Do NOT mix with calcium IV. Reconstitute with 1% lidocaine for IM.","interactions":["Calcium IV (neonates: FATAL)","Warfarin"]},
+  "Cefazolin":{"generic":"Cefazolin sodium","class":"1st Gen Cephalosporin","group":"Cephalosporin Antibiotics","forms":["IV/IM injection 500mg/1g/2g"],"standard_dose":{"pediatric":25,"adult":1000,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":6000,"adult":6000},"toxic_dose":150,"frequency":["q8h"],"duration":{"standard":"5-10 days"},"indications":["Skin/soft tissue infections","Surgical prophylaxis","UTI","Pneumonia","Bone infections"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"q12h"},"creatinine_severe":{"threshold":707,"adjustment":"q24h, reduce 50%"}},"hepatic_adjust":"No significant adjustment","notes":"1st choice for surgical prophylaxis.","interactions":["Probenecid"]},
+  "Gentamicin":{"generic":"Gentamicin sulfate","class":"Aminoglycoside","group":"Aminoglycoside Antibiotics","forms":["IV/IM injection 10mg/ml, 40mg/ml","Eye/ear drops"],"standard_dose":{"pediatric":5,"adult":5,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":300,"adult":360},"toxic_dose":10,"frequency":["q8h","q24h"],"duration":{"standard":"5-7 days"},"indications":["Septicemia","Pneumonia","UTI","Meningitis (adjunct)","Peritonitis"],"renal_adjust":{"creatinine_mild":{"threshold":177,"adjustment":"q12h"},"creatinine_moderate":{"threshold":354,"adjustment":"q24-36h, monitor levels"},"creatinine_severe":{"threshold":707,"adjustment":"q48h+; serial monitoring"}},"hepatic_adjust":"No adjustment","notes":"⚠️ NEPHROTOXIC & OTOTOXIC. Monitor serum levels. Hydrate well.","interactions":["Furosemide (ototoxicity)","Vancomycin (nephrotoxicity)"]},
+  "Metronidazole":{"generic":"Metronidazole","class":"Nitroimidazole","group":"Antiprotozoal / Anaerobic Antibiotic","forms":["Oral tablet 200mg/400mg/500mg","IV infusion 500mg/100ml","Suppository 500mg/1g"],"standard_dose":{"pediatric":7.5,"adult":400,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":2250,"adult":4000},"toxic_dose":60,"frequency":["q8h"],"duration":{"standard":"5-7 days"},"indications":["Amoebiasis","Giardiasis","C. difficile","Bacterial vaginosis","Anaerobic infections","H. pylori","Dental infections"],"renal_adjust":{"note":"No significant adjustment"},"hepatic_adjust":"Reduce 50% in severe hepatic impairment","notes":"⚠️ Avoid alcohol (disulfiram reaction). Metallic taste common.","interactions":["Alcohol","Warfarin","Lithium","Phenytoin"]},
+  "Ciprofloxacin":{"generic":"Ciprofloxacin HCl","class":"Fluoroquinolone","group":"Quinolone Antibiotics","forms":["Oral tablet 250mg/500mg/750mg","IV infusion 200mg/400mg","Eye drops 0.3%"],"standard_dose":{"pediatric":10,"adult":500,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":1500,"adult":1500},"toxic_dose":80,"frequency":["q12h"],"duration":{"standard":"7-14 days"},"indications":["UTI","Typhoid fever","Diarrhea","Atypical pneumonia","Gonorrhea","Osteomyelitis"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"Reduce 50%"},"creatinine_severe":{"threshold":707,"adjustment":"250-500mg q24h"}},"hepatic_adjust":"Caution in severe hepatic impairment","notes":"⚠️ Avoid <18yr unless necessary. Avoid dairy/antacids 2h before/after.","interactions":["Antacids (reduce absorption)","Theophylline","Warfarin"]},
+  "Doxycycline":{"generic":"Doxycycline hyclate","class":"Tetracycline","group":"Tetracycline Antibiotics","forms":["Oral capsule 50mg/100mg","IV injection 100mg/200mg"],"standard_dose":{"pediatric":2.2,"adult":100,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":200,"adult":200},"toxic_dose":10,"frequency":["q12h"],"duration":{"standard":"7-14 days"},"indications":["Malaria","Chlamydia","Lyme disease","Acne","MRSA skin","Rickettsia","Atypical pneumonia"],"renal_adjust":{"note":"Safe in renal impairment; preferred tetracycline"},"hepatic_adjust":"Caution; reduce in severe hepatic disease","notes":"⚠️ Avoid <8yr (tooth discoloration). Upright position, full glass water.","interactions":["Antacids","Dairy","Warfarin","Oral contraceptives"]},
+  "Azithromycin":{"generic":"Azithromycin dihydrate","class":"Macrolide","group":"Macrolide Antibiotics","forms":["Oral tablet 250mg/500mg","Oral suspension 100mg/5ml, 200mg/5ml","IV injection 500mg"],"standard_dose":{"pediatric":10,"adult":500,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":500,"adult":500},"toxic_dose":30,"frequency":["q24h"],"duration":{"standard":"3-5 days"},"indications":["Community-acquired pneumonia","Pharyngitis","Skin infections","Chlamydia","Pertussis"],"renal_adjust":{"note":"No adjustment in mild-moderate renal impairment"},"hepatic_adjust":"Caution in severe hepatic impairment","notes":"Long half-life (68h). Z-pack: 500mg day1 then 250mg days 2-5.","interactions":["QT-prolonging drugs","Warfarin","Cyclosporine"]},
+  "Vancomycin":{"generic":"Vancomycin HCl","class":"Glycopeptide","group":"Glycopeptide Antibiotics","forms":["IV infusion 500mg/1g powder","Oral capsule 125mg/250mg (C.diff)"],"standard_dose":{"pediatric":15,"adult":15,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":4000,"adult":4500},"toxic_dose":80,"frequency":["q6h","q8h","q12h"],"duration":{"standard":"7-14 days"},"indications":["MRSA","C. difficile (oral)","Endocarditis","Meningitis MRSA"],"renal_adjust":{"creatinine_mild":{"threshold":177,"adjustment":"q12h, trough 10-15mg/L"},"creatinine_moderate":{"threshold":354,"adjustment":"q24-48h, monitor levels"},"creatinine_severe":{"threshold":707,"adjustment":"Level-guided only"}},"hepatic_adjust":"No significant adjustment","notes":"⚠️ NEPHROTOXIC. Infuse ≥60min. Red Man Syndrome if too fast.","interactions":["Aminoglycosides (nephrotoxicity)","Loop diuretics"]},
+  "Meropenem":{"generic":"Meropenem trihydrate","class":"Carbapenem","group":"Carbapenem Antibiotics","forms":["IV injection 500mg/1g powder"],"standard_dose":{"pediatric":20,"adult":1000,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":6000,"adult":6000},"toxic_dose":120,"frequency":["q8h"],"duration":{"standard":"7-14 days"},"indications":["Septicemia","Meningitis","Peritonitis","Febrile neutropenia","HAP/VAP"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"Reduce 50%, q12h"},"creatinine_severe":{"threshold":707,"adjustment":"500mg q24h"}},"hepatic_adjust":"No significant adjustment","notes":"Reserve for resistant infections. Infuse 30min (or 3h extended for MDR).","interactions":["Valproate (reduces levels)","Probenecid"]},
+  "Artemether-Lumefantrine":{"generic":"Artemether + Lumefantrine","class":"ACT Antimalarial","group":"Antimalarial Drugs","forms":["Oral tablet 20mg/120mg","Oral tablet 40mg/240mg"],"weight_bands":[{"min":5,"max":14.9,"tablets":1},{"min":15,"max":24.9,"tablets":2},{"min":25,"max":34.9,"tablets":3},{"min":35,"max":9999,"tablets":4}],"max_dose_per_day":{"adult":8},"toxic_dose":"N/A","frequency":["0h,8h,24h,36h,48h,60h (6 doses)"],"duration":{"standard":"3 days (6 doses)"},"indications":["Uncomplicated P. falciparum malaria","Mixed malaria"],"renal_adjust":{"note":"No adjustment"},"hepatic_adjust":"Caution in severe hepatic impairment","notes":"Take with food. Avoid 1st trimester. QT monitoring required.","interactions":["QT-prolonging drugs","CYP3A4 inhibitors"]},
+  "Artesunate":{"generic":"Artesunate","class":"Artemisinin derivative","group":"Antimalarial Drugs","forms":["IV/IM injection 60mg/120mg","Rectal suppository 50-400mg"],"standard_dose":{"pediatric":3,"adult":2.4,"unit":"mg","per":"kg"},"max_dose_per_day":{"adult":480},"toxic_dose":10,"frequency":["0h,12h,24h then q24h"],"duration":{"standard":"Min 3 days IV then oral"},"indications":["Severe malaria","Cerebral malaria","High parasitemia"],"renal_adjust":{"note":"No significant adjustment"},"hepatic_adjust":"No significant adjustment","notes":"WHO 1st-line for severe malaria. Monitor for delayed hemolysis.","interactions":["Limited interactions"]},
+  "Albendazole":{"generic":"Albendazole","class":"Benzimidazole Anthelmintic","group":"Antiparasitic Drugs","forms":["Oral tablet 400mg","Oral suspension 200mg/5ml"],"dose_range":{"fixed_dose":"400mg"},"max_dose_per_day":{"pediatric":800,"adult":800},"toxic_dose":40,"frequency":["Single dose","q12h x3 days (severe)"],"duration":{"standard":"1-3 days"},"indications":["Ascariasis","Hookworm","Pinworm","Trichuriasis","Neurocysticercosis","Hydatid"],"renal_adjust":{"note":"No adjustment"},"hepatic_adjust":"Monitor LFTs","notes":"Take with fatty meal. Children <2yr: 200mg.","interactions":["Praziquantel","Dexamethasone"]},
+  "Mebendazole":{"generic":"Mebendazole","class":"Benzimidazole Anthelmintic","group":"Antiparasitic Drugs","forms":["Oral tablet 100mg/500mg","Oral suspension 100mg/5ml"],"dose_range":{"fixed_dose":"100mg BD x3 or 500mg single"},"max_dose_per_day":{"adult":1000},"toxic_dose":50,"frequency":["q12h x3 days or single"],"duration":{"standard":"1-3 days"},"indications":["Roundworm","Hookworm","Pinworm","Whipworm","Trichinella"],"renal_adjust":{"note":"No adjustment"},"hepatic_adjust":"Avoid in severe hepatic disease","notes":"Can chew, swallow, or crush with food.","interactions":["Cimetidine"]},
+  "Acyclovir":{"generic":"Acyclovir (Aciclovir)","class":"Nucleoside Analogue Antiviral","group":"Antiviral Drugs","forms":["Oral tablet 200mg/400mg/800mg","IV injection 250mg/500mg","Topical cream 5%"],"standard_dose":{"pediatric":15,"adult":400,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":3000,"adult":4800},"toxic_dose":80,"frequency":["q8h","q4h 5x/day"],"duration":{"standard":"7-10 days"},"indications":["HSV","Varicella-zoster","HSV encephalitis","Neonatal HSV"],"renal_adjust":{"creatinine_mild":{"threshold":177,"adjustment":"q12h IV"},"creatinine_moderate":{"threshold":354,"adjustment":"q24h IV, reduce oral"},"creatinine_severe":{"threshold":707,"adjustment":"Reduce 50-75%; q24h"}},"hepatic_adjust":"No significant adjustment","notes":"Hydrate well IV. Infuse ≥60min.","interactions":["Probenecid","Nephrotoxic drugs"]},
+  "Fluconazole":{"generic":"Fluconazole","class":"Triazole Antifungal","group":"Antifungal Drugs","forms":["Oral capsule 50mg/100mg/150mg/200mg","IV infusion 200mg/400mg"],"standard_dose":{"pediatric":6,"adult":150,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":800,"adult":800},"toxic_dose":40,"frequency":["q24h"],"duration":{"standard":"14 days"},"indications":["Candidiasis","Cryptococcal meningitis","Vaginal candidiasis","Tinea infections"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"q48h"},"creatinine_severe":{"threshold":707,"adjustment":"Reduce 50%, q48h"}},"hepatic_adjust":"Caution; monitor LFTs","notes":"QTc prolongation risk. Check interactions.","interactions":["Warfarin (major)","Tacrolimus","Phenytoin"]},
+  "Paracetamol":{"generic":"Paracetamol (Acetaminophen)","class":"Analgesic / Antipyretic","group":"Non-opioid Analgesics","forms":["Oral tablet 325mg/500mg","Oral suspension 120mg/5ml, 250mg/5ml","Suppository 125mg/250mg/500mg","IV infusion 10mg/ml"],"standard_dose":{"pediatric":15,"adult":500,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":60,"adult":4000},"toxic_dose":150,"frequency":["q4-6h"],"duration":{"standard":"5-7 days"},"indications":["Fever","Mild-moderate pain","Headache","Post-op pain"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"q6h"},"creatinine_severe":{"threshold":707,"adjustment":"q8h"}},"hepatic_adjust":"⚠️ REDUCE DOSE. Max 2g/day alcoholism. AVOID severe hepatic failure.","notes":"⚠️ HEPATOTOXIC in overdose. N-acetylcysteine antidote. Safest analgesic in renal disease.","interactions":["Warfarin","Alcohol (hepatotoxicity)","Rifampicin"]},
+  "Ibuprofen":{"generic":"Ibuprofen","class":"NSAID","group":"NSAIDs","forms":["Oral tablet 200mg/400mg/600mg/800mg","Oral suspension 100mg/5ml","Topical gel 5%"],"standard_dose":{"pediatric":5,"adult":400,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":40,"adult":2400},"toxic_dose":100,"frequency":["q6-8h"],"duration":{"standard":"5-7 days"},"indications":["Fever","Pain","Inflammation","Arthritis","Dysmenorrhea","Gout"],"renal_adjust":{"creatinine_moderate":{"threshold":177,"adjustment":"Avoid if CrCl <30"},"creatinine_severe":{"threshold":354,"adjustment":"⚠️ AVOID — AKI risk"}},"hepatic_adjust":"Avoid in severe hepatic disease","notes":"⚠️ Avoid in <3 months, renal impairment, GI bleed, heart failure. Take with food.","interactions":["ACE inhibitors/ARBs","Warfarin","Aspirin","Lithium"]},
+  "Dexamethasone":{"generic":"Dexamethasone sodium phosphate","class":"Corticosteroid","group":"Corticosteroids","forms":["IV/IM injection 4mg/ml","Oral tablet 0.5mg/1mg/2mg/4mg","Eye drops 0.1%"],"standard_dose":{"pediatric":0.15,"adult":8,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":10,"adult":40},"toxic_dose":2,"frequency":["q6h","q12h"],"duration":{"standard":"3-5 days"},"indications":["Croup","Meningitis","Severe asthma","Anaphylaxis","Cerebral edema","COVID-19 severe"],"renal_adjust":{"note":"Monitor fluids/electrolytes"},"hepatic_adjust":"May need reduction in severe hepatic disease","notes":"Potency 6-7x prednisolone. HPA suppression. Monitor glucose.","interactions":["NSAIDs (GI bleed)","Warfarin","Insulin/OHAs","Live vaccines"]},
+  "Prednisolone":{"generic":"Prednisolone","class":"Corticosteroid","group":"Corticosteroids","forms":["Oral tablet 1mg/5mg/25mg","Oral solution 5mg/5ml"],"standard_dose":{"pediatric":1,"adult":40,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":60,"adult":60},"toxic_dose":5,"frequency":["q24h","q12h"],"duration":{"standard":"3-5 days"},"indications":["Asthma exacerbation","Croup","Nephrotic syndrome","Allergic rhinitis","Autoimmune disease"],"renal_adjust":{"note":"Caution; fluid retention risk"},"hepatic_adjust":"Preferred over prednisone in hepatic disease","notes":"Take morning with food. Taper if >2 weeks.","interactions":["NSAIDs","Antidiabetics","Warfarin","Live vaccines"]},
+  "Salbutamol":{"generic":"Salbutamol (Albuterol)","class":"Beta-2 Agonist Bronchodilator","group":"Bronchodilators","forms":["MDI inhaler 100mcg/puff","Nebulizer 2.5mg/2.5ml, 5mg/2.5ml","Oral syrup 2mg/5ml"],"standard_dose":{"pediatric":0.15,"adult":2.5,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":5,"adult":40},"toxic_dose":1,"frequency":["q20min x3 acute, then q4-6h"],"duration":{"standard":"As needed"},"indications":["Asthma","Bronchospasm","COPD exacerbation","Hyperkalemia adjunct"],"renal_adjust":{"note":"No significant adjustment"},"hepatic_adjust":"No adjustment","notes":"Monitor HR and K+. Use spacer with MDI in children.","interactions":["Beta-blockers (antagonism)","Loop diuretics (hypokalemia)"]},
+  "Chlorpheniramine":{"generic":"Chlorphenamine maleate","class":"1st Gen H1 Antihistamine","group":"Antihistamines","forms":["Oral tablet 4mg","Oral syrup 2mg/5ml","IV/IM injection 10mg/ml"],"standard_dose":{"pediatric":0.1,"adult":4,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":12,"adult":24},"toxic_dose":5,"frequency":["q6h"],"duration":{"standard":"5-7 days"},"indications":["Allergic rhinitis","Urticaria","Anaphylaxis adjunct","Hay fever","Pruritus"],"renal_adjust":{"note":"Caution in renal impairment"},"hepatic_adjust":"Reduce in severe hepatic disease","notes":"Sedating. Avoid in glaucoma, BPH. Avoid driving.","interactions":["CNS depressants","Alcohol","MAOIs"]},
+  "Cetirizine":{"generic":"Cetirizine HCl","class":"2nd Gen H1 Antihistamine","group":"Antihistamines","forms":["Oral tablet 5mg/10mg","Oral syrup 5mg/5ml"],"standard_dose":{"pediatric":0.25,"adult":10,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":10,"adult":10},"toxic_dose":3,"frequency":["q24h"],"duration":{"standard":"As needed or daily"},"indications":["Allergic rhinitis","Chronic urticaria","Pruritus","Hay fever"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"5mg q24h"},"creatinine_severe":{"threshold":707,"adjustment":"5mg q48h"}},"hepatic_adjust":"Caution in severe hepatic disease","notes":"Less sedating than 1st gen. Age >2yr: 2.5-5mg/day.","interactions":["CNS depressants","Ritonavir"]},
+  "Omeprazole":{"generic":"Omeprazole","class":"Proton Pump Inhibitor","group":"Gastrointestinal Drugs","forms":["Oral capsule 10mg/20mg/40mg","IV injection 40mg"],"standard_dose":{"pediatric":1,"adult":20,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":40,"adult":40},"toxic_dose":10,"frequency":["q24h","q12h"],"duration":{"standard":"4-8 weeks"},"indications":["GERD","Peptic ulcer","H. pylori eradication","NSAID gastropathy","Stress ulcer prophylaxis"],"renal_adjust":{"note":"No significant adjustment"},"hepatic_adjust":"Max 20mg/day in severe hepatic impairment","notes":"Take 30-60min before meals. Swallow whole.","interactions":["Clopidogrel","Methotrexate","Atazanavir"]},
+  "ORS":{"generic":"Oral Rehydration Salts","class":"Rehydration Solution","group":"Electrolyte Solutions","forms":["Powder sachet","Ready-to-use solution"],"ors_guide":{"mild":"50ml/kg/4h","moderate":"100ml/kg/4h","maintenance":"10ml/kg/stool"},"toxic_dose":"N/A","frequency":["Sip frequently"],"duration":{"standard":"Until dehydration corrected"},"indications":["Dehydration","Diarrhea","Gastroenteritis","Vomiting","Cholera"],"renal_adjust":{"note":"Monitor electrolytes"},"hepatic_adjust":"No adjustment","notes":"WHO ORS: Na 75, K 20, Cl 65, citrate 10, glucose 75 mmol/L.","interactions":[]},
+  "Furosemide":{"generic":"Furosemide (Frusemide)","class":"Loop Diuretic","group":"Diuretics","forms":["Oral tablet 20mg/40mg/80mg","IV/IM injection 10mg/ml"],"standard_dose":{"pediatric":1,"adult":40,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":6,"adult":600},"toxic_dose":6,"frequency":["q6-12h"],"duration":{"standard":"As indicated"},"indications":["Edema","Heart failure","Hypertension","Nephrotic syndrome","Pulmonary edema"],"renal_adjust":{"note":"Higher doses may be needed; monitor electrolytes"},"hepatic_adjust":"Risk of hepatic encephalopathy (K+ depletion)","notes":"Monitor K+, Na+, Mg2+. Ototoxicity at high IV doses.","interactions":["Aminoglycosides (ototoxicity)","NSAIDs","ACE inhibitors","Lithium"]},
+  "Phenobarbital":{"generic":"Phenobarbital (Phenobarbitone)","class":"Barbiturate Anticonvulsant","group":"Antiepileptic Drugs","forms":["Oral tablet 15mg/30mg/60mg/100mg","IV/IM injection 200mg/ml"],"standard_dose":{"loading":20,"maintenance":5,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":300,"adult":300},"toxic_dose":40,"frequency":["q24h maintenance","Single loading"],"duration":{"standard":"Ongoing"},"indications":["Neonatal seizures","Status epilepticus","Epilepsy","Febrile seizures"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"Reduce dose"}},"hepatic_adjust":"Reduce in severe hepatic disease","notes":"Therapeutic level 15-40mcg/ml. Sedation, respiratory depression risk.","interactions":["CNS depressants","Warfarin","Valproate"]},
+  "Diazepam":{"generic":"Diazepam","class":"Benzodiazepine","group":"Benzodiazepines","forms":["Oral tablet 2mg/5mg/10mg","IV/IM injection 5mg/ml","Rectal gel 5mg/10mg per 2.5ml"],"standard_dose":{"pediatric":0.3,"adult":5,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":10,"adult":40},"toxic_dose":2,"frequency":["Single dose acute","q8-12h anxiety"],"duration":{"standard":"Short-term only"},"indications":["Status epilepticus","Acute seizures","Anxiety","Alcohol withdrawal","Muscle spasm"],"renal_adjust":{"note":"Caution; reduce in severe renal impairment"},"hepatic_adjust":"Reduce significantly; prolonged half-life","notes":"⚠️ DEPENDENCE risk. Respiratory depression. Keep flumazenil available.","interactions":["CNS depressants","Alcohol","Opioids"]},
+  "Vitamin A":{"generic":"Retinol / Vitamin A","class":"Fat-soluble Vitamin","group":"Vitamins","forms":["Oral capsule 50,000IU/100,000IU/200,000IU"],"age_dose":{"under6m":50000,"6to12m":100000,"over12m":200000},"toxic_dose":"N/A","frequency":["Single dose","Repeat 24h if deficiency"],"duration":{"standard":"1-3 doses"},"indications":["Measles","Vitamin A deficiency","Xerophthalmia","Night blindness","Malnutrition"],"renal_adjust":{"note":"No adjustment"},"hepatic_adjust":"No adjustment","notes":"⚠️ TERATOGENIC in pregnancy at high doses.","interactions":["Retinoids (additive toxicity)","Cholestyramine"]},
+  "Zinc":{"generic":"Zinc sulfate / Zinc acetate","class":"Trace Mineral","group":"Vitamins & Supplements","forms":["Oral tablet 20mg elemental zinc","Oral syrup 10mg/5ml"],"zinc_dose":{"under6m":10,"over6m":20},"toxic_dose":"N/A","frequency":["q24h x10-14 days"],"duration":{"standard":"10-14 days"},"indications":["Diarrhea (adjunct ORS)","Zinc deficiency","Prevention recurrence"],"renal_adjust":{"note":"No adjustment"},"hepatic_adjust":"No adjustment","notes":"WHO recommends zinc with ORS for diarrhea in children.","interactions":["Fluoroquinolones","Iron"]},
+  "Insulin Regular":{"generic":"Human Insulin Regular","class":"Short-acting Insulin","group":"Antidiabetic Drugs","forms":["SC/IV injection 100IU/ml","Pen cartridge 100IU/ml"],"insulin_note":"Dose individualized","max_dose_per_day":{"adult":100},"toxic_dose":"N/A","frequency":["q6h SC","Continuous IV (DKA)"],"duration":{"standard":"As needed"},"indications":["Diabetes type 1 & 2","DKA","Hyperkalemia","TPN"],"renal_adjust":{"note":"Reduce dose; hypoglycemia risk"},"hepatic_adjust":"Reduce in hepatic disease","notes":"⚠️ HYPOGLYCEMIA risk. Always verify dose. Monitor glucose q1-2h in DKA.","interactions":["Beta-blockers (mask hypoglycemia)","Corticosteroids","Thiazides"]},
+  "Tramadol":{"generic":"Tramadol HCl","class":"Weak Opioid / SNRI","group":"Opioid Analgesics","forms":["Oral capsule 50mg/100mg","IV/IM injection 50mg/ml"],"standard_dose":{"pediatric":1,"adult":50,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":400,"adult":400},"toxic_dose":8,"frequency":["q4-6h"],"duration":{"standard":"Short-term"},"indications":["Moderate-severe pain","Post-op pain","Cancer pain","Neuropathic pain"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"q12h, max 200mg/day"},"creatinine_severe":{"threshold":707,"adjustment":"AVOID or 50mg q12h"}},"hepatic_adjust":"Reduce dose and frequency","notes":"⚠️ SEIZURE RISK. Serotonin syndrome. Avoid <12yr.","interactions":["MAOIs (CONTRAINDICATED)","SSRIs (serotonin syndrome)"]},
+  "Morphine":{"generic":"Morphine sulfate","class":"Strong Opioid","group":"Opioid Analgesics","forms":["Oral tablet 10mg/20mg/30mg","Oral solution 10mg/5ml","IV/SC injection 1mg/ml, 10mg/ml"],"standard_dose":{"pediatric":0.1,"adult":2,"unit":"mg","per":"kg"},"max_dose_per_day":{"pediatric":30,"adult":200},"toxic_dose":1,"frequency":["q3-4h IR","q8-12h ER"],"duration":{"standard":"As needed"},"indications":["Severe pain","Cancer pain","Post-op pain","Palliative","Acute pulmonary edema"],"renal_adjust":{"creatinine_moderate":{"threshold":354,"adjustment":"Reduce 25%, q6h"},"creatinine_severe":{"threshold":707,"adjustment":"Reduce 50%; avoid metabolite accumulation"}},"hepatic_adjust":"Significant reduction needed","notes":"⚠️ Respiratory depression. Keep naloxone available.","interactions":["CNS depressants","MAOIs","Benzodiazepines"]}
 };
 
 const DIAGNOSIS_DRUG_MAP = {
-  "Pneumonia": ["Amoxicillin", "Amoxicillin-Clavulanate", "Azithromycin", "Ceftriaxone", "Doxycycline"],
-  "Community-acquired pneumonia": ["Amoxicillin", "Azithromycin", "Doxycycline", "Amoxicillin-Clavulanate"],
-  "Severe pneumonia": ["Ceftriaxone", "Ampicillin", "Meropenem", "Gentamicin"],
-  "Meningitis": ["Ceftriaxone", "Ampicillin", "Meropenem", "Vancomycin", "Dexamethasone", "Phenobarbital"],
-  "Sepsis": ["Ceftriaxone", "Ampicillin", "Gentamicin", "Meropenem", "Vancomycin"],
-  "Malaria": ["Artemether-Lumefantrine", "Artesunate", "Doxycycline"],
-  "Severe malaria": ["Artesunate", "Artemether-Lumefantrine", "Dexamethasone"],
-  "UTI": ["Amoxicillin", "Ciprofloxacin", "Ceftriaxone"],
-  "Diarrhea": ["ORS", "Zinc", "Metronidazole"],
-  "Gastroenteritis": ["ORS", "Zinc"],
-  "Amoebiasis": ["Metronidazole", "Albendazole"],
-  "Intestinal parasites": ["Albendazole", "Mebendazole"],
-  "Worm infection": ["Albendazole", "Mebendazole"],
-  "Asthma": ["Salbutamol", "Prednisolone", "Dexamethasone"],
-  "Asthma exacerbation": ["Salbutamol", "Prednisolone"],
-  "Croup": ["Dexamethasone", "Prednisolone", "Salbutamol"],
-  "Fever": ["Paracetamol", "Ibuprofen"],
-  "Pain": ["Paracetamol", "Ibuprofen", "Tramadol", "Morphine"],
-  "Allergic reaction": ["Chlorpheniramine", "Cetirizine", "Dexamethasone"],
-  "Anaphylaxis": ["Dexamethasone", "Chlorpheniramine"],
-  "GERD": ["Omeprazole"],
-  "Peptic ulcer": ["Omeprazole", "Amoxicillin", "Metronidazole"],
-  "H. pylori": ["Omeprazole", "Amoxicillin", "Metronidazole", "Azithromycin"],
-  "Seizures": ["Diazepam", "Phenobarbital"],
-  "Status epilepticus": ["Diazepam", "Phenobarbital", "Dexamethasone"],
-  "Febrile seizure": ["Diazepam", "Paracetamol", "Phenobarbital"],
-  "Dehydration": ["ORS", "Zinc"],
-  "Skin infection": ["Amoxicillin-Clavulanate", "Cefazolin", "Doxycycline"],
-  "Cellulitis": ["Amoxicillin-Clavulanate", "Cefazolin", "Vancomycin"],
-  "Varicella": ["Acyclovir", "Paracetamol", "Cetirizine"],
-  "Herpes zoster": ["Acyclovir", "Doxycycline"],
-  "Candidiasis": ["Fluconazole"],
-  "Oedema": ["Furosemide"],
-  "Heart failure": ["Furosemide"],
-  "Diabetes": ["Insulin Regular"],
-  "DKA": ["Insulin Regular", "ORS"],
-  "Vitamin A deficiency": ["Vitamin A"],
-  "Measles": ["Vitamin A", "Paracetamol", "Amoxicillin"],
-  "Malnutrition": ["Vitamin A", "Zinc", "Amoxicillin"],
-  "Typhoid fever": ["Ceftriaxone", "Ciprofloxacin", "Azithromycin"],
-  "MRSA infection": ["Vancomycin", "Doxycycline"],
+  "Pneumonia":["Amoxicillin","Amoxicillin-Clavulanate","Azithromycin","Ceftriaxone","Doxycycline"],
+  "Community-acquired pneumonia":["Amoxicillin","Azithromycin","Doxycycline","Amoxicillin-Clavulanate"],
+  "Severe pneumonia":["Ceftriaxone","Ampicillin","Meropenem","Gentamicin"],
+  "Meningitis":["Ceftriaxone","Ampicillin","Meropenem","Vancomycin","Dexamethasone","Phenobarbital"],
+  "Sepsis":["Ceftriaxone","Ampicillin","Gentamicin","Meropenem","Vancomycin"],
+  "Bacteremia":["Ceftriaxone","Ampicillin","Vancomycin","Meropenem"],
+  "Malaria":["Artemether-Lumefantrine","Artesunate","Doxycycline"],
+  "Severe malaria":["Artesunate","Artemether-Lumefantrine","Dexamethasone"],
+  "Cerebral malaria":["Artesunate","Dexamethasone","Phenobarbital"],
+  "UTI":["Amoxicillin","Ciprofloxacin","Ceftriaxone","Nitrofurantoin"],
+  "Urinary tract infection":["Amoxicillin","Ciprofloxacin","Ceftriaxone"],
+  "Diarrhea":["ORS","Zinc","Metronidazole"],
+  "Acute diarrhea":["ORS","Zinc"],
+  "Gastroenteritis":["ORS","Zinc"],
+  "Cholera":["ORS","Doxycycline","Azithromycin"],
+  "Amoebiasis":["Metronidazole"],
+  "Giardiasis":["Metronidazole"],
+  "Intestinal parasites":["Albendazole","Mebendazole"],
+  "Worm infection":["Albendazole","Mebendazole"],
+  "Helminthiasis":["Albendazole","Mebendazole"],
+  "Asthma":["Salbutamol","Prednisolone","Dexamethasone"],
+  "Asthma exacerbation":["Salbutamol","Prednisolone","Dexamethasone"],
+  "Bronchospasm":["Salbutamol","Prednisolone"],
+  "COPD exacerbation":["Salbutamol","Amoxicillin-Clavulanate","Prednisolone"],
+  "Croup":["Dexamethasone","Prednisolone","Salbutamol"],
+  "Fever":["Paracetamol","Ibuprofen"],
+  "Febrile illness":["Paracetamol","Ibuprofen"],
+  "Pain":["Paracetamol","Ibuprofen","Tramadol","Morphine"],
+  "Acute pain":["Paracetamol","Ibuprofen","Tramadol"],
+  "Severe pain":["Morphine","Tramadol"],
+  "Allergic reaction":["Chlorpheniramine","Cetirizine","Dexamethasone"],
+  "Allergic rhinitis":["Cetirizine","Chlorpheniramine"],
+  "Urticaria":["Cetirizine","Chlorpheniramine","Dexamethasone"],
+  "Anaphylaxis":["Dexamethasone","Chlorpheniramine"],
+  "GERD":["Omeprazole"],
+  "Gastritis":["Omeprazole"],
+  "Peptic ulcer":["Omeprazole","Amoxicillin","Metronidazole"],
+  "H. pylori":["Omeprazole","Amoxicillin","Metronidazole","Azithromycin"],
+  "Seizures":["Diazepam","Phenobarbital"],
+  "Status epilepticus":["Diazepam","Phenobarbital","Dexamethasone"],
+  "Febrile seizure":["Diazepam","Paracetamol","Phenobarbital"],
+  "Epilepsy":["Phenobarbital","Diazepam"],
+  "Dehydration":["ORS","Zinc"],
+  "Skin infection":["Amoxicillin-Clavulanate","Cefazolin","Doxycycline"],
+  "Cellulitis":["Amoxicillin-Clavulanate","Cefazolin","Vancomycin"],
+  "Wound infection":["Amoxicillin-Clavulanate","Cefazolin"],
+  "Abscess":["Amoxicillin-Clavulanate","Cefazolin"],
+  "Varicella":["Acyclovir","Paracetamol","Cetirizine"],
+  "Chickenpox":["Acyclovir","Paracetamol","Cetirizine"],
+  "Herpes zoster":["Acyclovir"],
+  "HSV":["Acyclovir"],
+  "Candidiasis":["Fluconazole"],
+  "Oral thrush":["Fluconazole"],
+  "Oedema":["Furosemide"],
+  "Edema":["Furosemide"],
+  "Heart failure":["Furosemide"],
+  "Pulmonary edema":["Furosemide","Morphine"],
+  "Diabetes":["Insulin Regular"],
+  "DKA":["Insulin Regular","ORS"],
+  "Hyperglycemia":["Insulin Regular"],
+  "Vitamin A deficiency":["Vitamin A"],
+  "Measles":["Vitamin A","Paracetamol","Amoxicillin"],
+  "Malnutrition":["Vitamin A","Zinc","Amoxicillin"],
+  "Typhoid fever":["Ceftriaxone","Ciprofloxacin","Azithromycin"],
+  "Typhoid":["Ceftriaxone","Ciprofloxacin","Azithromycin"],
+  "MRSA infection":["Vancomycin","Doxycycline"],
+  "MRSA":["Vancomycin","Doxycycline"],
+  "Otitis media":["Amoxicillin","Amoxicillin-Clavulanate"],
+  "Sinusitis":["Amoxicillin-Clavulanate","Amoxicillin"],
+  "Pharyngitis":["Amoxicillin","Azithromycin"],
+  "Tonsillitis":["Amoxicillin","Azithromycin"],
+  "Bronchitis":["Amoxicillin","Amoxicillin-Clavulanate","Azithromycin"],
+  "Endocarditis":["Ampicillin","Gentamicin","Vancomycin"],
+  "Peritonitis":["Meropenem","Metronidazole","Ceftriaxone"],
+  "Intra-abdominal infection":["Meropenem","Metronidazole","Ceftriaxone"],
+  "Dental infection":["Amoxicillin","Metronidazole","Amoxicillin-Clavulanate"],
+  "Osteomyelitis":["Cefazolin","Ciprofloxacin","Vancomycin"],
+  "Nephrotic syndrome":["Prednisolone","Furosemide"],
+  "Inflammatory bowel disease":["Prednisolone","Metronidazole"],
+  "COVID-19 severe":["Dexamethasone"],
+  "Pruritus":["Cetirizine","Chlorpheniramine"],
+  "Hay fever":["Cetirizine","Chlorpheniramine"]
 };
 
 const ALL_DIAGNOSES = Object.keys(DIAGNOSIS_DRUG_MAP);
 const ALL_DRUGS = Object.keys(DRUG_DB);
 
+// ========================================================
+// STATE
+// ========================================================
 let currentMode = 1;
 let selectedDiagnoses = [];
-let calcHistory = JSON.parse(localStorage.getItem('medcalc_history') || '[]');
-let diagDropdownIndex = -1;
-let drugDropdownIndex = -1;
+let calcHistory = [];
+try { calcHistory = JSON.parse(localStorage.getItem('medcalc_history') || '[]'); } catch(e){ calcHistory = []; }
+let diagIdx = -1, drugIdx = -1;
 
-function getPatientData() {
+// ========================================================
+// HELPERS
+// ========================================================
+function getPatient() {
   return {
     age: parseFloat(document.getElementById('patientAge').value) || 0,
     ageUnit: document.getElementById('ageUnit').value,
     weight: parseFloat(document.getElementById('patientWeight').value) || 0,
     sex: document.getElementById('patientSex').value,
-    routePref: document.getElementById('routePref').value,
     urea: parseFloat(document.getElementById('labUrea').value) || null,
     crea: parseFloat(document.getElementById('labCrea').value) || null,
     asat: parseFloat(document.getElementById('labASAT').value) || null,
@@ -846,412 +583,561 @@ function getPatientData() {
   };
 }
 
-function getAgeInYears(age, unit) {
+function ageInYears(age, unit) {
   if (unit === 'years') return age;
   if (unit === 'months') return age / 12;
   if (unit === 'days') return age / 365;
   return age;
 }
 
-function isPediatric(age, unit) { return getAgeInYears(age, unit) < 12; }
+function isPed(age, unit) { return ageInYears(age, unit) < 12; }
 
-function getCrCl(patient) {
-  if (!patient.crea || !patient.age || !patient.weight) return null;
-  const ageYears = getAgeInYears(patient.age, patient.ageUnit);
-  const creatMg = patient.crea / 88.4;
-  let crcl;
-  if (isPediatric(patient.age, patient.ageUnit)) {
-    crcl = (0.55 * patient.weight * 100) / (patient.crea);
+function getCrCl(p) {
+  if (!p.crea || !p.age || !p.weight) return null;
+  const yr = ageInYears(p.age, p.ageUnit);
+  const crmg = p.crea / 88.4;
+  let v = isPed(p.age, p.ageUnit)
+    ? (0.55 * p.weight * 100) / p.crea
+    : ((140 - yr) * p.weight) / (72 * crmg) * (p.sex === 'female' ? 0.85 : 1);
+  return Math.round(v);
+}
+
+function renalLevel(crea) {
+  if (!crea) return {lvl:'unknown',label:'Unknown',cls:''};
+  if (crea < 130) return {lvl:'normal',label:'Normal',cls:'ok'};
+  if (crea < 177) return {lvl:'mild',label:'Mild impairment',cls:'ok'};
+  if (crea < 354) return {lvl:'moderate',label:'Moderate impairment',cls:'kidney'};
+  if (crea < 707) return {lvl:'severe',label:'Severe impairment',cls:'kidney'};
+  return {lvl:'esrd',label:'End-stage renal disease',cls:'kidney'};
+}
+
+function hepaticLevel(asat, alat) {
+  if (!asat && !alat) return {lvl:'unknown',label:'Unknown'};
+  const mx = Math.max(asat||0, alat||0);
+  if (mx < 40)  return {lvl:'normal',label:'Normal'};
+  if (mx < 120) return {lvl:'mild',label:'Mild (1-3× ULN)'};
+  if (mx < 400) return {lvl:'moderate',label:'Moderate (3-10× ULN)'};
+  return {lvl:'severe',label:'Severe (>10× ULN)'};
+}
+
+// ========================================================
+// DOSE CALCULATION
+// ========================================================
+function calcDose(name, d, p) {
+  const yr = ageInYears(p.age, p.ageUnit);
+  const ped = isPed(p.age, p.ageUnit);
+  const wt = p.weight;
+  let dDay=0, dPerDay=3, single=0, unit='mg', dur=d.duration?.standard||'7 days', steps='', warns=[];
+
+  // --- Special dosing types ---
+  if (d.ors_guide) {
+    single = wt * 50; dDay = single; dPerDay = 1; unit = 'ml';
+    steps = `ORS Mild: 50ml/kg × ${wt}kg = ${single}ml over 4h\nModerate: 100ml/kg = ${wt*100}ml over 4h`;
+
+  } else if (d.weight_bands) {
+    const band = d.weight_bands.find(b => wt >= b.min && wt <= b.max) || d.weight_bands[d.weight_bands.length-1];
+    single = band.tablets; dPerDay = 2; dDay = single * 2; unit = 'tablet(s)';
+    steps = `AL Weight Band: ${wt}kg → ${band.tablets} tablet(s)/dose\n6 doses: 0h 8h 24h 36h 48h 60h`;
+
+  } else if (d.age_dose) {
+    // Vitamin A age-based
+    const yr2 = ageInYears(p.age, p.ageUnit);
+    if (yr2 < 0.5) single = 50000;
+    else if (yr2 < 1) single = 100000;
+    else single = 200000;
+    dPerDay = 1; dDay = single; unit = 'IU';
+    steps = `Vitamin A age-based:\n<6m: 50,000IU | 6-12m: 100,000IU | >12m: 200,000IU\nSelected: ${single} IU`;
+
+  } else if (d.zinc_dose) {
+    const yr2 = ageInYears(p.age, p.ageUnit);
+    single = yr2 < 0.5 ? 10 : 20; dPerDay = 1; dDay = single; unit = 'mg';
+    steps = `Zinc: <6m → 10mg/day | ≥6m → 20mg/day\nSelected: ${single}mg/day`;
+
+  } else if (d.insulin_note) {
+    single = 0.1 * wt; dPerDay = 4; dDay = single * 4; unit = 'IU';
+    steps = `Insulin: 0.1 IU/kg per dose\n${0.1} × ${wt}kg = ${single.toFixed(2)} IU/dose\n4 doses/day (or continuous infusion for DKA)`;
+
+  } else if (d.dose_range?.fixed_dose) {
+    single = (ped && yr < 2) ? 200 : 400;
+    dPerDay = 1; dDay = single; unit = 'mg';
+    steps = `Fixed dose: Age<2yr → 200mg | Age≥2yr → 400mg\nSelected: ${single}mg single dose`;
+
+  } else if (d.standard_dose?.loading) {
+    const load = d.standard_dose.loading * wt;
+    const maint = (d.standard_dose.maintenance || 5) * wt;
+    const maxM = ped ? (d.max_dose_per_day?.pediatric||300) : (d.max_dose_per_day?.adult||300);
+    single = Math.min(load, ped ? 1000 : 2000);
+    dDay = Math.min(maint, maxM); dPerDay = 1; unit = 'mg';
+    steps = `Loading: ${d.standard_dose.loading}mg/kg × ${wt}kg = ${load}mg\nMaintenance: ${d.standard_dose.maintenance}mg/kg/day × ${wt}kg = ${maint}mg/day\nCapped at: ${dDay}mg/day`;
+
+  } else if (d.standard_dose) {
+    const sd = ped ? d.standard_dose.pediatric : (d.standard_dose.adult || d.standard_dose.pediatric);
+    if (!sd && sd !== 0) {
+      steps = 'Dose data unavailable — use AI calculation';
+      return {single:'N/A',dDay:'N/A',dPerDay:3,freqH:8,unit:'mg',dur,maxDose:'N/A',toxicDose:'N/A',renalAdj:'',hepaticAdj:'',warns,steps,form:d.forms?.[0]||'N/A',notes:d.notes||'',indications:d.indications||[],interactions:d.interactions||[]};
+    }
+    const maxD = ped ? (d.max_dose_per_day?.pediatric||3000) : (d.max_dose_per_day?.adult||3000);
+    dDay = d.standard_dose.per === 'kg' ? sd * wt : sd;
+    const freq = d.frequency?.[0] || 'q8h';
+    if (freq.includes('q24')) dPerDay=1;
+    else if (freq.includes('q12')) dPerDay=2;
+    else if (freq.includes('q8')) dPerDay=3;
+    else if (freq.includes('q6')) dPerDay=4;
+    else dPerDay=3;
+    dDay = Math.min(dDay, maxD);
+    single = dDay / dPerDay;
+    unit = d.standard_dose.unit || 'mg';
+    steps = `Standard dose: ${sd}${unit}${d.standard_dose.per==='kg'?'/kg':''}\n`;
+    if (d.standard_dose.per==='kg') {
+      steps += `${sd} × ${wt}kg = ${(sd*wt).toFixed(1)}${unit}/day\n`;
+      if (dDay < sd*wt) steps += `⚠️ Capped at max: ${maxD}${unit}/day\n`;
+    }
+    steps += `Frequency: ${dPerDay}×/day (q${24/dPerDay}h)\nSingle dose: ${(single).toFixed(1)}${unit}`;
   } else {
-    crcl = ((140 - ageYears) * patient.weight) / (72 * creatMg);
-    if (patient.sex === 'female') crcl *= 0.85;
-  }
-  return Math.round(crcl);
-}
-
-function assessRenal(crea) {
-  if (!crea) return { level: 'unknown', label: 'Unknown', color: '' };
-  if (crea < 130) return { level: 'normal', label: 'Normal', color: 'normal' };
-  if (crea < 177) return { level: 'mild', label: 'Mild impairment', color: 'normal' };
-  if (crea < 354) return { level: 'moderate', label: 'Moderate impairment', color: 'kidney' };
-  if (crea < 707) return { level: 'severe', label: 'Severe impairment', color: 'kidney' };
-  return { level: 'esrd', label: 'End-stage renal disease', color: 'kidney' };
-}
-
-function assessHepatic(asat, alat) {
-  if (!asat && !alat) return { level: 'unknown', label: 'Unknown' };
-  const max = Math.max(asat || 0, alat || 0);
-  if (max < 40) return { level: 'normal', label: 'Normal' };
-  if (max < 120) return { level: 'mild', label: 'Mild (1-3x ULN)' };
-  if (max < 400) return { level: 'moderate', label: 'Moderate (3-10x ULN)' };
-  return { level: 'severe', label: 'Severe (>10x ULN)' };
-}
-
-function calculateDose(drug, drugData, patient) {
-  const ageYears = getAgeInYears(patient.age, patient.ageUnit);
-  const isPed = isPediatric(patient.age, patient.ageUnit);
-  const weight = patient.weight;
-  let dosePerDay = 0, dosesPerDay = 3, singleDose = 0, unit = 'mg';
-  let duration = drugData.duration?.standard || '7 days';
-  let calcSteps = '';
-  let warnings = [];
-
-  if (drugData.dose_range?.fixed_dose) {
-    singleDose = isPed && ageYears < 2 ? 200 : 400;
-    dosesPerDay = 1; dosePerDay = singleDose; unit = 'mg';
-    calcSteps = `Fixed dose: Age<2yr→200mg; Age≥2yr→400mg\nSingle dose: ${singleDose}mg`;
-  } else if (drugData.ors_guide) {
-    const vol = weight * 50;
-    singleDose = vol; dosePerDay = vol; unit = 'ml';
-    calcSteps = `ORS: 50ml/kg × ${weight}kg = ${vol}ml over 4h (mild)\nModerate: 100ml/kg = ${weight*100}ml`;
-  } else if (drugData.weight_bands) {
-    const band = drugData.weight_bands.find(b => weight >= b.min && weight <= b.max) || drugData.weight_bands[drugData.weight_bands.length-1];
-    singleDose = band.tablets; dosesPerDay = 2; dosePerDay = band.tablets * 2; unit = 'tablet(s)';
-    calcSteps = `AL Weight Band: ${weight}kg → ${band.tablets} tablet(s)/dose\n6 doses: 0h, 8h, 24h, 36h, 48h, 60h`;
-  } else if (drugData.standard_dose?.loading) {
-    const loading = drugData.standard_dose.loading * weight;
-    const maintenance = (drugData.standard_dose.maintenance || 5) * weight;
-    const maxMaint = isPed ? (drugData.max_dose_per_day?.pediatric || 300) : (drugData.max_dose_per_day?.adult || 300);
-    singleDose = Math.min(loading, isPed ? 1000 : 2000);
-    dosePerDay = Math.min(maintenance, maxMaint); dosesPerDay = 1; unit = 'mg';
-    calcSteps = `Loading: ${drugData.standard_dose.loading}mg/kg × ${weight}kg = ${loading}mg\nMaintenance: ${drugData.standard_dose.maintenance}mg/kg/day × ${weight}kg = ${maintenance}mg/day`;
-  } else {
-    const stdDose = isPed ? drugData.standard_dose.pediatric : (drugData.standard_dose.adult || drugData.standard_dose.pediatric);
-    const maxDay = isPed ? (drugData.max_dose_per_day?.pediatric || 3000) : (drugData.max_dose_per_day?.adult || 3000);
-    dosePerDay = drugData.standard_dose.per === 'kg' ? stdDose * weight : stdDose;
-    const freq = drugData.frequency?.[0] || 'q8h';
-    if (freq.includes('q24')) dosesPerDay = 1;
-    else if (freq.includes('q12')) dosesPerDay = 2;
-    else if (freq.includes('q8')) dosesPerDay = 3;
-    else if (freq.includes('q6')) dosesPerDay = 4;
-    else dosesPerDay = 3;
-    dosePerDay = Math.min(dosePerDay, maxDay);
-    singleDose = dosePerDay / dosesPerDay;
-    unit = drugData.standard_dose.unit || 'mg';
-    calcSteps = `Std dose: ${stdDose}${unit}${drugData.standard_dose.per === 'kg' ? '/kg' : ''}\n`;
-    if (drugData.standard_dose.per === 'kg') calcSteps += `${stdDose} × ${weight}kg = ${(stdDose*weight).toFixed(1)}${unit}/day\n`;
-    calcSteps += `Frequency: ${dosesPerDay}×/day (q${24/dosesPerDay}h)\nSingle dose: ${(dosePerDay/dosesPerDay).toFixed(1)}${unit}`;
+    steps = 'Dose data unavailable — use AI calculation';
+    return {single:'N/A',dDay:'N/A',dPerDay:3,freqH:8,unit:'mg',dur,maxDose:'N/A',toxicDose:'N/A',renalAdj:'',hepaticAdj:'',warns,steps,form:d.forms?.[0]||'N/A',notes:d.notes||'',indications:d.indications||[],interactions:d.interactions||[]};
   }
 
+  // --- Renal adjustment ---
   let renalAdj = '';
-  if (patient.crea && drugData.renal_adjust) {
-    const adj = drugData.renal_adjust;
-    if (adj.creatinine_severe && patient.crea >= adj.creatinine_severe.threshold) {
-      renalAdj = adj.creatinine_severe.adjustment;
-      warnings.push(`⚠️ Renal adjustment required: ${renalAdj}`);
-      calcSteps += `\n\nRenal (Crea ${patient.crea}µmol/L – SEVERE):\n${renalAdj}`;
-    } else if (adj.creatinine_moderate && patient.crea >= adj.creatinine_moderate.threshold) {
-      renalAdj = adj.creatinine_moderate.adjustment;
-      warnings.push(`⚠️ Renal adjustment: ${renalAdj}`);
-      calcSteps += `\n\nRenal (Crea ${patient.crea}µmol/L – MODERATE):\n${renalAdj}`;
-    } else if (adj.creatinine_mild && patient.crea >= adj.creatinine_mild.threshold) {
-      renalAdj = adj.creatinine_mild.adjustment;
-      calcSteps += `\n\nRenal (Crea ${patient.crea}µmol/L – MILD):\n${renalAdj}`;
-    } else if (adj.note) { calcSteps += `\n\nRenal note: ${adj.note}`; }
-  }
-
-  let hepaticAdj = '';
-  if ((patient.asat || patient.alat) && drugData.hepatic_adjust) {
-    const hep = assessHepatic(patient.asat, patient.alat);
-    if (hep.level === 'severe' || hep.level === 'moderate') {
-      hepaticAdj = drugData.hepatic_adjust;
-      if (hep.level === 'severe') warnings.push(`⚠️ Hepatic adjustment: ${hepaticAdj}`);
-      calcSteps += `\n\nHepatic (AST:${patient.asat||'?'} ALT:${patient.alat||'?'} – ${hep.label}):\n${hepaticAdj}`;
+  if (p.crea && d.renal_adjust) {
+    const ra = d.renal_adjust;
+    if (ra.creatinine_severe && p.crea >= ra.creatinine_severe.threshold) {
+      renalAdj = ra.creatinine_severe.adjustment;
+      warns.push(`⚠️ Renal (SEVERE): ${renalAdj}`);
+      steps += `\n\nRenal Adj (Crea ${p.crea}µmol/L – SEVERE):\n${renalAdj}`;
+    } else if (ra.creatinine_moderate && p.crea >= ra.creatinine_moderate.threshold) {
+      renalAdj = ra.creatinine_moderate.adjustment;
+      warns.push(`⚠️ Renal (MODERATE): ${renalAdj}`);
+      steps += `\n\nRenal Adj (Crea ${p.crea}µmol/L – MODERATE):\n${renalAdj}`;
+    } else if (ra.creatinine_mild && p.crea >= ra.creatinine_mild.threshold) {
+      renalAdj = ra.creatinine_mild.adjustment;
+      steps += `\n\nRenal Note (Crea ${p.crea}µmol/L – MILD):\n${renalAdj}`;
+    } else if (ra.note) {
+      steps += `\n\nRenal: ${ra.note}`;
     }
   }
 
-  const maxDose = isPed ? drugData.max_dose_per_day?.pediatric : drugData.max_dose_per_day?.adult;
-  const toxicDose = typeof drugData.toxic_dose === 'number' ? (drugData.toxic_dose * weight) : null;
+  // --- Hepatic adjustment ---
+  let hepaticAdj = '';
+  if ((p.asat || p.alat) && d.hepatic_adjust) {
+    const hep = hepaticLevel(p.asat, p.alat);
+    if (hep.lvl === 'severe' || hep.lvl === 'moderate') {
+      hepaticAdj = d.hepatic_adjust;
+      if (hep.lvl === 'severe') warns.push(`⚠️ Hepatic (SEVERE): ${hepaticAdj}`);
+      steps += `\n\nHepatic Adj (AST:${p.asat||'?'} ALT:${p.alat||'?'} – ${hep.label}):\n${hepaticAdj}`;
+    }
+  }
+
+  const maxD = ped ? d.max_dose_per_day?.pediatric : d.max_dose_per_day?.adult;
+  const toxD = typeof d.toxic_dose === 'number' ? d.toxic_dose * wt : null;
+
   return {
-    singleDose: singleDose.toFixed(1), dosePerDay: dosePerDay.toFixed(1),
-    dosesPerDay, frequencyHours: 24 / dosesPerDay, unit, duration,
-    maxDose: maxDose ? `${maxDose}${unit}/day` : 'N/A',
-    toxicDose: toxicDose ? `>${toxicDose.toFixed(0)}${unit}/day` : (drugData.toxic_dose || 'N/A'),
-    renalAdj, hepaticAdj, warnings, calcSteps,
-    formType: drugData.forms?.[0] || 'N/A',
-    notes: drugData.notes || '',
-    indications: drugData.indications || [],
-    interactions: drugData.interactions || [],
+    single: typeof single === 'number' ? single.toFixed(1) : single,
+    dDay: typeof dDay === 'number' ? dDay.toFixed(1) : dDay,
+    dPerDay, freqH: 24 / dPerDay, unit, dur,
+    maxDose: maxD ? `${maxD}${unit}/day` : 'N/A',
+    toxicDose: toxD ? `>${toxD.toFixed(0)}${unit}/day` : (d.toxic_dose || 'N/A'),
+    renalAdj, hepaticAdj, warns, steps,
+    form: d.forms?.[0] || 'N/A',
+    notes: d.notes || '',
+    indications: d.indications || [],
+    interactions: d.interactions || [],
   };
 }
 
-function switchMode(mode) {
-  currentMode = mode;
-  document.getElementById('tab-mode1').classList.toggle('active', mode === 1);
-  document.getElementById('tab-mode2').classList.toggle('active', mode === 2);
-  document.getElementById('mode1-panel').style.display = mode === 1 ? 'block' : 'none';
-  document.getElementById('mode2-panel').style.display = mode === 2 ? 'block' : 'none';
+// ========================================================
+// UI
+// ========================================================
+function switchMode(m) {
+  currentMode = m;
+  document.getElementById('tab-mode1').classList.toggle('active', m===1);
+  document.getElementById('tab-mode2').classList.toggle('active', m===2);
+  document.getElementById('mode1-panel').style.display = m===1 ? 'block' : 'none';
+  document.getElementById('mode2-panel').style.display = m===2 ? 'block' : 'none';
 }
 
 function toggleLab() {
   document.getElementById('labFields').classList.toggle('show', document.getElementById('labToggle').checked);
 }
 
+// --- Diagnosis autocomplete ---
 function filterDiagnoses(val) {
   const dd = document.getElementById('diagDropdown');
-  diagDropdownIndex = -1;
-  if (!val || val.length < 1) { dd.classList.remove('show'); return; }
-  const filtered = ALL_DIAGNOSES.filter(d => d.toLowerCase().includes(val.toLowerCase())).slice(0, 12);
-  if (!filtered.length) { dd.classList.remove('show'); return; }
-  dd.innerHTML = filtered.map((d,i) => `<div class="dropdown-item" onclick="selectDiagnosis('${d}')" data-idx="${i}"><span>${d}</span><span class="drug-class">${DIAGNOSIS_DRUG_MAP[d]?.length||0} drugs</span></div>`).join('');
+  diagIdx = -1;
+  if (!val) { dd.classList.remove('show'); return; }
+  const q = val.toLowerCase();
+  const hits = ALL_DIAGNOSES.filter(d => d.toLowerCase().includes(q)).slice(0, 14);
+  if (!hits.length) { dd.classList.remove('show'); return; }
+  dd.innerHTML = hits.map((d,i) =>
+    `<div class="dd-item" onclick="selectDiagnosis('${d.replace(/'/g,"\\'")}')"><span>${d}</span><span class="dd-class">${(DIAGNOSIS_DRUG_MAP[d]||[]).length} drugs</span></div>`
+  ).join('');
   dd.classList.add('show');
 }
 
 function diagKeydown(e) {
   const dd = document.getElementById('diagDropdown');
-  const items = dd.querySelectorAll('.dropdown-item');
-  if (e.key === 'ArrowDown') { diagDropdownIndex = Math.min(diagDropdownIndex+1, items.length-1); items.forEach((el,i)=>el.classList.toggle('active',i===diagDropdownIndex)); e.preventDefault(); }
-  else if (e.key === 'ArrowUp') { diagDropdownIndex = Math.max(diagDropdownIndex-1,-1); items.forEach((el,i)=>el.classList.toggle('active',i===diagDropdownIndex)); e.preventDefault(); }
-  else if (e.key === 'Enter') { if (diagDropdownIndex >= 0) items[diagDropdownIndex]?.click(); else if(document.getElementById('diagInput').value) selectDiagnosis(document.getElementById('diagInput').value); }
-  else if (e.key === 'Escape') dd.classList.remove('show');
+  const items = dd.querySelectorAll('.dd-item');
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') { diagIdx = Math.min(diagIdx+1, items.length-1); highlightDD(items, diagIdx); e.preventDefault(); }
+  else if (e.key === 'ArrowUp') { diagIdx = Math.max(diagIdx-1, -1); highlightDD(items, diagIdx); e.preventDefault(); }
+  else if (e.key === 'Enter') {
+    if (diagIdx >= 0) items[diagIdx].click();
+    else { const v = document.getElementById('diagInput').value.trim(); if (v) selectDiagnosis(v); }
+  } else if (e.key === 'Escape') dd.classList.remove('show');
+}
+
+function highlightDD(items, idx) {
+  items.forEach((el,i) => el.classList.toggle('active', i===idx));
 }
 
 function selectDiagnosis(diag) {
-  if (!selectedDiagnoses.includes(diag)) selectedDiagnoses.push(diag);
+  if (diag && !selectedDiagnoses.includes(diag)) selectedDiagnoses.push(diag);
   document.getElementById('diagInput').value = '';
   document.getElementById('diagDropdown').classList.remove('show');
+  diagIdx = -1;
   renderDiagTags();
 }
 
-function removeDiagnosis(diag) {
+function removeDiag(diag) {
   selectedDiagnoses = selectedDiagnoses.filter(d => d !== diag);
   renderDiagTags();
 }
 
 function renderDiagTags() {
   document.getElementById('diagTags').innerHTML = selectedDiagnoses.map(d =>
-    `<div class="diag-tag">${d}<button onclick="removeDiagnosis('${d}')">×</button></div>`).join('');
+    `<div class="diag-tag">${d}<button onclick="removeDiag('${d.replace(/'/g,"\\'")}')">×</button></div>`
+  ).join('');
 }
 
+// --- Drug autocomplete ---
 function filterDrugs(val) {
   const dd = document.getElementById('drugDropdown');
-  drugDropdownIndex = -1;
-  if (!val || val.length < 1) { dd.classList.remove('show'); return; }
-  const filtered = ALL_DRUGS.filter(d => d.toLowerCase().includes(val.toLowerCase())).slice(0, 15);
-  if (!filtered.length) { dd.classList.remove('show'); return; }
-  dd.innerHTML = filtered.map((d,i) => `<div class="dropdown-item" onclick="selectDrug('${d}')" data-idx="${i}"><span>${d}</span><span class="drug-class">${DRUG_DB[d]?.class||''}</span></div>`).join('');
+  drugIdx = -1;
+  if (!val) { dd.classList.remove('show'); return; }
+  const q = val.toLowerCase();
+  const hits = ALL_DRUGS.filter(d => d.toLowerCase().includes(q)).slice(0, 15);
+  if (!hits.length) { dd.classList.remove('show'); return; }
+  dd.innerHTML = hits.map((d,i) =>
+    `<div class="dd-item" onclick="selectDrug('${d.replace(/'/g,"\\'")}')"><span>${d}</span><span class="dd-class">${DRUG_DB[d]?.class||''}</span></div>`
+  ).join('');
   dd.classList.add('show');
 }
 
 function drugKeydown(e) {
   const dd = document.getElementById('drugDropdown');
-  const items = dd.querySelectorAll('.dropdown-item');
-  if (e.key === 'ArrowDown') { drugDropdownIndex = Math.min(drugDropdownIndex+1,items.length-1); items.forEach((el,i)=>el.classList.toggle('active',i===drugDropdownIndex)); e.preventDefault(); }
-  else if (e.key === 'ArrowUp') { drugDropdownIndex = Math.max(drugDropdownIndex-1,-1); items.forEach((el,i)=>el.classList.toggle('active',i===drugDropdownIndex)); e.preventDefault(); }
-  else if (e.key === 'Enter') { if (drugDropdownIndex >= 0) items[drugDropdownIndex]?.click(); }
+  const items = dd.querySelectorAll('.dd-item');
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') { drugIdx = Math.min(drugIdx+1, items.length-1); highlightDD(items, drugIdx); e.preventDefault(); }
+  else if (e.key === 'ArrowUp') { drugIdx = Math.max(drugIdx-1, -1); highlightDD(items, drugIdx); e.preventDefault(); }
+  else if (e.key === 'Enter') { if (drugIdx >= 0) items[drugIdx].click(); }
   else if (e.key === 'Escape') dd.classList.remove('show');
 }
 
 function selectDrug(drug) {
   document.getElementById('drugInput').value = drug;
   document.getElementById('drugDropdown').classList.remove('show');
+  drugIdx = -1;
 }
 
+// ========================================================
+// MODE 1 CALCULATE
+// ========================================================
 function calculateMode1() {
-  const patient = getPatientData();
-  if (!patient.weight || !patient.age) { showNotif('⚠️ Please enter age and weight'); return; }
+  const p = getPatient();
+  if (!p.age || !p.weight) { showNotif('⚠️ Please enter age and weight'); return; }
   if (!selectedDiagnoses.length) { showNotif('⚠️ Please add at least one diagnosis'); return; }
-  showAIThinking('Matching diagnoses to evidence-based protocols...');
-  setTimeout(() => {
-    const drugSet = new Set();
-    selectedDiagnoses.forEach(diag => (DIAGNOSIS_DRUG_MAP[diag] || []).forEach(d => drugSet.add(d)));
-    const drugs = Array.from(drugSet);
-    renderResults(patient, drugs, 1);
-    hideAIThinking();
-    saveHistory(patient, selectedDiagnoses, drugs);
-  }, 1000);
-}
 
-function calculateMode2() {
-  const patient = getPatientData();
-  const drugName = document.getElementById('drugInput').value.trim();
-  if (!patient.weight || !patient.age) { showNotif('⚠️ Please enter age and weight'); return; }
-  if (!drugName) { showNotif('⚠️ Please enter a drug name'); return; }
-  const exactMatch = ALL_DRUGS.find(d => d.toLowerCase() === drugName.toLowerCase());
-  const drugToCalc = exactMatch || ALL_DRUGS.find(d => d.toLowerCase().includes(drugName.toLowerCase()));
-  if (!drugToCalc) {
-    showAIThinking(`AI querying "${drugName}"...`);
-    setTimeout(() => { hideAIThinking(); aiCalculateDrug(patient, drugName); }, 600);
-    return;
-  }
-  showAIThinking('Calculating personalized dose...');
+  showAI('Matching diagnoses to drug protocols...');
   setTimeout(() => {
-    renderResults(patient, [drugToCalc], 2);
-    hideAIThinking();
-    saveHistory(patient, [document.getElementById('indicationInput').value || 'Manual'], [drugToCalc]);
+    try {
+      const drugSet = new Set();
+      selectedDiagnoses.forEach(dx => {
+        const list = DIAGNOSIS_DRUG_MAP[dx];
+        if (list) list.forEach(drug => drugSet.add(drug));
+      });
+      const drugs = Array.from(drugSet);
+      if (!drugs.length) {
+        showNotif('⚠️ No drugs found for these diagnoses');
+        hideAI(); return;
+      }
+      renderResults(p, drugs, 1);
+      hideAI();
+      saveHist(p, selectedDiagnoses.slice(), drugs);
+    } catch(err) {
+      hideAI();
+      showNotif('Error: ' + err.message);
+      console.error(err);
+    }
   }, 800);
 }
 
-async function aiCalculateDrug(patient, drugName) {
-  showAIThinking(`AI calculating ${drugName}...`);
-  const prompt = `You are a clinical pharmacist. Calculate drug dosing for:
-Patient: Age ${patient.age} ${patient.ageUnit}, Weight ${patient.weight}kg, Sex: ${patient.sex}
-Labs: Creatinine ${patient.crea||'N/A'}µmol/L, Urea ${patient.urea||'N/A'}mmol/L, ASAT ${patient.asat||'N/A'}U/L, ALAT ${patient.alat||'N/A'}U/L
-Drug: ${drugName}, Indication: ${document.getElementById('indicationInput').value||'General'}
-Respond ONLY in JSON (no markdown, no backticks):
-{"drugName":"...","genericName":"...","drugClass":"...","drugGroup":"...","doseForms":["..."],"singleDose":"...","singleDoseUnit":"mg","dosePerDay":"...","dosesPerDay":3,"frequencyHours":8,"duration":"...","maxDosePerDay":"...","toxicDose":"...","renalAdjustment":"...","hepaticAdjustment":"...","indications":["..."],"interactions":["..."],"notes":"...","calcSteps":"Step-by-step calculation..."}`;
+// ========================================================
+// MODE 2 CALCULATE
+// ========================================================
+function calculateMode2() {
+  const p = getPatient();
+  const rawName = document.getElementById('drugInput').value.trim();
+  if (!p.age || !p.weight) { showNotif('⚠️ Please enter age and weight'); return; }
+  if (!rawName) { showNotif('⚠️ Please enter a drug name'); return; }
+
+  const exact = ALL_DRUGS.find(d => d.toLowerCase() === rawName.toLowerCase());
+  const fuzzy = ALL_DRUGS.find(d => d.toLowerCase().includes(rawName.toLowerCase()));
+  const found = exact || fuzzy;
+
+  if (!found) {
+    showAI(`AI calculating "${rawName}"...`);
+    setTimeout(() => { hideAI(); aiCalc(p, rawName); }, 400);
+    return;
+  }
+
+  showAI('Calculating dose...');
+  setTimeout(() => {
+    try {
+      renderResults(p, [found], 2);
+      hideAI();
+      saveHist(p, [document.getElementById('indicationInput').value || 'Manual'], [found]);
+    } catch(err) {
+      hideAI(); showNotif('Error: ' + err.message); console.error(err);
+    }
+  }, 600);
+}
+
+// ========================================================
+// AI CALCULATE (unknown drugs)
+// ========================================================
+async function aiCalc(p, name) {
+  showAI(`AI calculating ${name}...`);
+  const prompt = `You are a clinical pharmacist. Calculate drug dosing:
+Patient: Age ${p.age} ${p.ageUnit}, Weight ${p.weight}kg, Sex: ${p.sex}
+Labs: Creatinine ${p.crea||'N/A'}µmol/L, Urea ${p.urea||'N/A'}mmol/L, ASAT ${p.asat||'N/A'}U/L, ALAT ${p.alat||'N/A'}U/L
+Drug: ${name}
+Indication: ${document.getElementById('indicationInput').value||'General'}
+Reply ONLY in JSON (no backticks):
+{"drugName":"","genericName":"","drugClass":"","singleDose":"","singleDoseUnit":"mg","dosePerDay":"","dosesPerDay":3,"frequencyHours":8,"duration":"","maxDosePerDay":"","toxicDose":"","renalAdjustment":"","hepaticAdjustment":"","indications":[],"interactions":[],"notes":"","calcSteps":""}`;
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] })
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
     });
-    const data = await response.json();
-    const text = data.content?.map(c => c.text||'').join('');
-    const result = JSON.parse(text.replace(/```json|```/g,'').trim());
-    hideAIThinking();
-    renderAIResult(patient, result);
-    saveHistory(patient, [document.getElementById('indicationInput').value||'AI Query'], [drugName]);
+    const data = await res.json();
+    const txt = (data.content||[]).map(c=>c.text||'').join('');
+    const obj = JSON.parse(txt.replace(/```json|```/g,'').trim());
+    hideAI();
+    renderAIResult(p, obj);
+    saveHist(p, ['AI Query'], [name]);
   } catch(err) {
-    hideAIThinking();
-    document.getElementById('resultsPanel').innerHTML = `<div class="card"><div class="card-body" style="color:var(--danger)">⚠️ AI query failed: ${err.message}</div></div>`;
+    hideAI();
+    document.getElementById('resultsPanel').innerHTML = `<div class="card"><div class="card-body" style="color:var(--danger)">⚠️ AI error: ${err.message}<br>Check drug name or try Mode 1.</div></div>`;
   }
 }
 
-function renderAIResult(patient, result) {
-  if (!result?.drugName) { document.getElementById('resultsPanel').innerHTML = `<div class="card"><div class="card-body"><div class="empty-state"><div class="empty-state-icon-img"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png"></div><div class="empty-state-text">No results. Check drug name.</div></div></div></div>`; return; }
-  const renal = assessRenal(patient.crea), hepatic = assessHepatic(patient.asat, patient.alat), crcl = getCrCl(patient);
-  document.getElementById('resultsPanel').innerHTML = `
-    <div class="result-header"><div class="result-title">AI Drug Analysis</div><button class="btn btn-secondary btn-sm" onclick="resetResults()">✕</button></div>
-    <div class="drug-result">
-      <div class="drug-result-header"><div><div class="drug-name">${result.drugName}</div><div class="drug-generic">${result.genericName||''}</div></div><div class="drug-class-badge">${result.drugClass||''}</div></div>
-      <div class="drug-result-body">
-        <div class="dose-grid">
-          <div class="dose-cell highlight"><div class="dose-cell-label">Single Dose</div><div class="dose-cell-value">${result.singleDose}</div><div class="dose-cell-unit">${result.singleDoseUnit||'mg'}</div></div>
-          <div class="dose-cell"><div class="dose-cell-label">Daily Total</div><div class="dose-cell-value">${result.dosePerDay}</div><div class="dose-cell-unit">${result.singleDoseUnit||'mg'}/day</div></div>
-          <div class="dose-cell"><div class="dose-cell-label">Frequency</div><div class="dose-cell-value">${result.dosesPerDay}×</div><div class="dose-cell-unit">every ${result.frequencyHours}h</div></div>
-          <div class="dose-cell"><div class="dose-cell-label">Duration</div><div class="dose-cell-value" style="font-size:12px">${result.duration}</div></div>
-          <div class="dose-cell warn"><div class="dose-cell-label">Max Dose/Day</div><div class="dose-cell-value" style="font-size:12px">${result.maxDosePerDay}</div></div>
-          <div class="dose-cell danger"><div class="dose-cell-label">Toxic Dose</div><div class="dose-cell-value" style="font-size:12px">${result.toxicDose}</div></div>
-        </div>
-        ${renderLabAlerts(patient,renal,hepatic,crcl,result.renalAdjustment,result.hepaticAdjustment)}
-        <div class="whiteboard"><div class="whiteboard-header"><div class="card-icon">🖊️</div><div class="card-title">Calculation Whiteboard (AI)</div></div>
-        <div class="whiteboard-body"><span class="calc-section">── AI CALCULATION STEPS ──</span>\n<span class="calc-step">${(result.calcSteps||'').replace(/\n/g,'\n')}</span></div></div>
-      </div>
-    </div>`;
+// ========================================================
+// RENDER RESULTS
+// ========================================================
+function labAlerts(p) {
+  let h = '';
+  if (p.crea) {
+    const r = renalLevel(p.crea);
+    const crcl = getCrCl(p);
+    h += `<div class="oa ${r.cls||'ok'}">🫘 Renal: ${r.label} | Crea: ${p.crea}µmol/L${crcl?' | CrCl: '+crcl+'ml/min':''}</div>`;
+  }
+  if (p.asat || p.alat) {
+    const hep = hepaticLevel(p.asat, p.alat);
+    h += `<div class="oa ${(hep.lvl==='severe'||hep.lvl==='moderate')?'liver':'ok'}">🫀 Hepatic: ${hep.label} | AST: ${p.asat||'?'} ALT: ${p.alat||'?'} U/L</div>`;
+  }
+  return h;
 }
 
-function renderResults(patient, drugs, mode) {
-  const renal = assessRenal(patient.crea), hepatic = assessHepatic(patient.asat, patient.alat), crcl = getCrCl(patient);
-  let html = `<div class="result-header"><div class="result-title">${mode===1?`${drugs.length} Drug${drugs.length>1?'s':''} Recommended`:'Dosage Calculation'}</div><button class="btn btn-secondary btn-sm" onclick="resetResults()">✕</button></div>`;
-  html += `<div class="card" style="margin-bottom:12px"><div class="card-body" style="padding:12px 16px"><div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
-    <div><span class="form-label">PATIENT</span><div class="text-mono" style="font-size:14px;color:var(--text)">${patient.age}${patient.ageUnit[0]} / ${patient.weight}kg</div></div>
-    ${patient.crea?`<div><span class="form-label">CREATININE</span><div class="text-mono" style="font-size:14px;color:${patient.crea>354?'var(--danger)':patient.crea>177?'var(--warn)':'var(--accent3)'}">${patient.crea}µmol/L</div></div>`:''}
-    ${crcl?`<div><span class="form-label">CrCl</span><div class="text-mono" style="font-size:14px;color:${crcl<30?'var(--danger)':crcl<60?'var(--warn)':'var(--accent3)'}">${crcl}ml/min</div></div>`:''}
-    ${patient.asat?`<div><span class="form-label">AST/ALT</span><div class="text-mono" style="font-size:14px;color:${(patient.asat>120||patient.alat>120)?'var(--warn)':'var(--accent3)'}">${patient.asat}/${patient.alat}U/L</div></div>`:''}
-    ${mode===1?`<div><span class="form-label">DIAGNOSES</span><div style="font-size:12px;color:var(--accent)">${selectedDiagnoses.join(', ')}</div></div>`:''}
-  </div></div></div>`;
-  html += renderLabAlerts(patient,renal,hepatic,crcl);
-  drugs.forEach(drugName => {
-    const drugData = DRUG_DB[drugName];
-    if (!drugData) return;
-    const calc = calculateDose(drugName, drugData, patient);
-    const sid = drugName.replace(/\W/g,'');
+function renderResults(p, drugs, mode) {
+  const crcl = getCrCl(p);
+  let html = `<div class="result-hd">
+    <div class="result-title">${mode===1 ? drugs.length+' Drug'+(drugs.length>1?'s':'')+' Recommended' : 'Dosage Result'}</div>
+    <button class="btn btn-secondary btn-sm" onclick="resetResults()">✕ Clear</button>
+  </div>`;
+
+  // Patient summary
+  html += `<div class="card" style="margin-bottom:12px"><div class="card-body" style="padding:12px 16px">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <div><div class="form-label">PATIENT</div><div style="font-family:var(--mono);font-size:14px;color:var(--tx)">${p.age}${p.ageUnit[0]} / ${p.weight}kg / ${p.sex}</div></div>
+      ${p.crea?`<div><div class="form-label">CREATININE</div><div style="font-family:var(--mono);font-size:14px;color:${p.crea>354?'var(--danger)':p.crea>177?'var(--warn)':'var(--ac3)'}">${p.crea} µmol/L</div></div>`:''}
+      ${crcl?`<div><div class="form-label">CrCl</div><div style="font-family:var(--mono);font-size:14px;color:${crcl<30?'var(--danger)':crcl<60?'var(--warn)':'var(--ac3)'}">${crcl} ml/min</div></div>`:''}
+      ${(p.asat||p.alat)?`<div><div class="form-label">AST/ALT</div><div style="font-family:var(--mono);font-size:14px;color:${(p.asat>120||p.alat>120)?'var(--warn)':'var(--ac3)'}">${p.asat||'?'}/${p.alat||'?'} U/L</div></div>`:''}
+      ${mode===1?`<div><div class="form-label">DIAGNOSES</div><div style="font-size:12px;color:var(--ac)">${selectedDiagnoses.join(', ')}</div></div>`:''}
+    </div>
+  </div></div>`;
+
+  html += labAlerts(p);
+
+  drugs.forEach(name => {
+    const d = DRUG_DB[name];
+    if (!d) return;
+    const c = calcDose(name, d, p);
+    const sid = name.replace(/[^a-zA-Z0-9]/g,'_');
+
     html += `<div class="drug-result">
-      <div class="drug-result-header"><div><div class="drug-name">${drugName}</div><div class="drug-generic">${drugData.generic}</div></div><div class="drug-class-badge">${drugData.group}</div></div>
+      <div class="drug-result-hd">
+        <div style="flex:1;min-width:0">
+          <div class="drug-name">${name}</div>
+          <div class="drug-generic">${d.generic}</div>
+        </div>
+        <div class="drug-cls">${d.group}</div>
+      </div>
       <div class="drug-result-body">
-        <div class="result-tabs">
-          <button class="result-tab active" onclick="switchDrugTab(this,'dose-${sid}')">💊 Dosing</button>
-          <button class="result-tab" onclick="switchDrugTab(this,'calc-${sid}')">🖊️ Calc</button>
-          <button class="result-tab" onclick="switchDrugTab(this,'info-${sid}')">ℹ️ Info</button>
+        <div class="rtabs">
+          <button class="rtab active" onclick="switchTab(this,'tab_dose_${sid}')">💊 Dosing</button>
+          <button class="rtab" onclick="switchTab(this,'tab_calc_${sid}')">🖊️ Calc</button>
+          <button class="rtab" onclick="switchTab(this,'tab_info_${sid}')">ℹ️ Info</button>
         </div>
-        <div class="result-tab-content active" id="dose-${sid}">
+
+        <div class="rtab-content active" id="tab_dose_${sid}">
           <div class="dose-grid">
-            <div class="dose-cell highlight"><div class="dose-cell-label">Single Dose</div><div class="dose-cell-value">${calc.singleDose}</div><div class="dose-cell-unit">${calc.unit}</div></div>
-            <div class="dose-cell"><div class="dose-cell-label">Daily Total</div><div class="dose-cell-value">${calc.dosePerDay}</div><div class="dose-cell-unit">${calc.unit}/day</div></div>
-            <div class="dose-cell"><div class="dose-cell-label">Frequency</div><div class="dose-cell-value">${calc.dosesPerDay}×</div><div class="dose-cell-unit">q${calc.frequencyHours}h</div></div>
-            <div class="dose-cell"><div class="dose-cell-label">Duration</div><div class="dose-cell-value" style="font-size:12px">${calc.duration}</div></div>
-            <div class="dose-cell warn"><div class="dose-cell-label">Max/Day</div><div class="dose-cell-value" style="font-size:12px">${calc.maxDose}</div></div>
-            <div class="dose-cell danger"><div class="dose-cell-label">Toxic</div><div class="dose-cell-value" style="font-size:12px">${calc.toxicDose}</div></div>
+            <div class="dose-cell hl"><div class="dc-label">Single Dose</div><div class="dc-val">${c.single}</div><div class="dc-unit">${c.unit}</div></div>
+            <div class="dose-cell"><div class="dc-label">Daily Total</div><div class="dc-val">${c.dDay}</div><div class="dc-unit">${c.unit}/day</div></div>
+            <div class="dose-cell"><div class="dc-label">Frequency</div><div class="dc-val">${c.dPerDay}×</div><div class="dc-unit">q${c.freqH}h</div></div>
+            <div class="dose-cell"><div class="dc-label">Duration</div><div class="dc-val" style="font-size:12px">${c.dur}</div></div>
+            <div class="dose-cell wn"><div class="dc-label">Max/Day</div><div class="dc-val" style="font-size:12px">${c.maxDose}</div></div>
+            <div class="dose-cell dg"><div class="dc-label">Toxic Dose</div><div class="dc-val" style="font-size:12px">${c.toxicDose}</div></div>
           </div>
-          <div style="font-size:11px;font-family:var(--mono);color:var(--text2);margin-top:6px">📦 ${calc.formType}</div>
-          ${calc.warnings.map(w=>`<div class="organ-alert kidney" style="margin-top:6px">⚠️ ${w}</div>`).join('')}
-          <div class="indications-list">${calc.indications.map(i=>`<span class="indication-tag">${i}</span>`).join('')}</div>
+          <div style="font-size:11px;font-family:var(--mono);color:var(--tx2);margin-top:6px">📦 ${c.form}</div>
+          ${c.warns.map(w=>`<div class="oa kidney" style="margin-top:6px">⚠️ ${w}</div>`).join('')}
+          <div class="ind-list">${(c.indications||[]).map(i=>`<span class="ind-tag">${i}</span>`).join('')}</div>
         </div>
-        <div class="result-tab-content" id="calc-${sid}">
-          <div class="whiteboard"><div class="whiteboard-header"><div class="card-icon">🖊️</div><div class="card-title">Whiteboard — ${drugName}</div></div>
-          <div class="whiteboard-body"><span class="calc-section">── PATIENT ──</span>
-<span class="calc-step">Age: ${patient.age}${patient.ageUnit[0]} | Wt: ${patient.weight}kg | Sex: ${patient.sex}</span>${patient.crea?`\n<span class="calc-step">Crea: ${patient.crea}µmol/L | Urea: ${patient.urea||'N/A'}mmol/L</span>`:''}${crcl?`\n<span class="calc-formula">CrCl (C-G): ${crcl}ml/min</span>`:''}${patient.asat||patient.alat?`\n<span class="calc-step">ASAT: ${patient.asat||'N/A'} | ALAT: ${patient.alat||'N/A'} U/L</span>`:''}
 
-<span class="calc-section">── CALCULATION ──</span>
-<span class="calc-formula">${calc.calcSteps.replace(/\n/g,'\n')}</span>
+        <div class="rtab-content" id="tab_calc_${sid}">
+          <div class="wb">
+            <div class="wb-hd"><div class="card-icon">🖊️</div><div class="card-title">Whiteboard — ${name}</div></div>
+            <div class="wb-body"><span class="csec">── PATIENT ──</span>
+<span class="cs">Age: ${p.age}${p.ageUnit[0]} | Wt: ${p.weight}kg | Sex: ${p.sex}</span>${p.crea?'\n<span class="cs">Crea: '+p.crea+'µmol/L | Urea: '+(p.urea||'N/A')+'mmol/L</span>':''}${getCrCl(p)?'\n<span class="cf">CrCl (Cockroft-Gault): '+getCrCl(p)+' ml/min</span>':''}${(p.asat||p.alat)?'\n<span class="cs">AST: '+(p.asat||'N/A')+' | ALT: '+(p.alat||'N/A')+' U/L</span>':''}
 
-<span class="calc-section">── PRESCRIPTION ──</span>
-<span class="calc-result">${drugName} ${calc.singleDose}${calc.unit} q${calc.frequencyHours}h × ${calc.duration}</span>
-<span class="calc-step">${calc.dosesPerDay}×/day | Total: ${calc.dosePerDay}${calc.unit}/day</span>
-<span class="calc-warn">Max: ${calc.maxDose} | Toxic: ${calc.toxicDose}</span></div></div>
+<span class="csec">── CALCULATION ──</span>
+<span class="cf">${c.steps.replace(/\n/g,'\n')}</span>
+
+<span class="csec">── FINAL PRESCRIPTION ──</span>
+<span class="cr">${name} ${c.single} ${c.unit} q${c.freqH}h × ${c.dur}</span>
+<span class="cs">= ${c.dPerDay} doses/day | Total: ${c.dDay} ${c.unit}/day</span>
+<span class="cw">Max: ${c.maxDose} | Toxic: ${c.toxicDose}</span></div>
+          </div>
         </div>
-        <div class="result-tab-content" id="info-${sid}">
-          <div class="dose-cell" style="margin-bottom:8px"><div class="dose-cell-label">Drug Class</div><div style="font-size:13px;color:var(--text);margin-top:3px">${drugData.class}</div></div>
-          <div class="dose-cell" style="margin-bottom:8px"><div class="dose-cell-label">⚠️ Notes</div><div style="font-size:12px;color:var(--warn);margin-top:3px;line-height:1.5">${calc.notes}</div></div>
-          ${calc.interactions.length?`<div class="dose-cell" style="margin-bottom:8px"><div class="dose-cell-label">🔴 Interactions</div><div style="font-size:12px;color:var(--danger);margin-top:3px;line-height:1.5">${calc.interactions.join(' • ')}</div></div>`:''}
-          ${calc.renalAdj?`<div class="organ-alert kidney">🫘 Renal: ${calc.renalAdj}</div>`:''}
-          ${calc.hepaticAdj?`<div class="organ-alert liver">🫀 Hepatic: ${calc.hepaticAdj}</div>`:''}
-          <div style="margin-top:8px"><div class="form-label">Forms</div><div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:5px">${(drugData.forms||[]).map(f=>`<span class="indication-tag">${f}</span>`).join('')}</div></div>
+
+        <div class="rtab-content" id="tab_info_${sid}">
+          <div class="dose-cell" style="margin-bottom:8px"><div class="dc-label">Drug Class</div><div style="font-size:13px;color:var(--tx);margin-top:3px">${d.class}</div></div>
+          <div class="dose-cell" style="margin-bottom:8px"><div class="dc-label">⚠️ Notes</div><div style="font-size:12px;color:var(--warn);margin-top:3px;line-height:1.5">${c.notes||'—'}</div></div>
+          ${(c.interactions||[]).length?`<div class="dose-cell" style="margin-bottom:8px"><div class="dc-label">🔴 Drug Interactions</div><div style="font-size:12px;color:var(--danger);margin-top:3px;line-height:1.5">${c.interactions.join(' • ')}</div></div>`:''}
+          ${c.renalAdj?`<div class="oa kidney">🫘 Renal Adjustment: ${c.renalAdj}</div>`:''}
+          ${c.hepaticAdj?`<div class="oa liver">🫀 Hepatic Adjustment: ${c.hepaticAdj}</div>`:''}
+          <div style="margin-top:8px"><div class="form-label">Available Forms</div><div class="ind-list">${(d.forms||[]).map(f=>`<span class="ind-tag">${f}</span>`).join('')}</div></div>
         </div>
       </div>
     </div>`;
   });
+
   document.getElementById('resultsPanel').innerHTML = html;
 }
 
-function renderLabAlerts(patient, renal, hepatic, crcl, renalAdj, hepaticAdj) {
-  let html = '';
-  if (patient.crea) html += `<div class="organ-alert ${renal.color||(renal.level==='normal'?'normal':'kidney')}">🫘 Renal: ${renal.label} | Crea: ${patient.crea}µmol/L${crcl?` | CrCl: ${crcl}ml/min`:''}${renalAdj?`<br>📌 ${renalAdj}`:''}</div>`;
-  if (patient.asat||patient.alat) html += `<div class="organ-alert ${(hepatic.level==='severe'||hepatic.level==='moderate')?'liver':'normal'}">🫀 Hepatic: ${hepatic.label} | ASAT: ${patient.asat||'?'} ALAT: ${patient.alat||'?'}U/L${hepaticAdj?`<br>📌 ${hepaticAdj}`:''}</div>`;
-  return html;
+function renderAIResult(p, r) {
+  if (!r?.drugName) { resetResults(); return; }
+  document.getElementById('resultsPanel').innerHTML = `
+    <div class="result-hd"><div class="result-title">AI Analysis</div><button class="btn btn-secondary btn-sm" onclick="resetResults()">✕</button></div>
+    ${labAlerts(p)}
+    <div class="drug-result">
+      <div class="drug-result-hd"><div><div class="drug-name">${r.drugName}</div><div class="drug-generic">${r.genericName||''}</div></div><div class="drug-cls">${r.drugClass||''}</div></div>
+      <div class="drug-result-body">
+        <div class="dose-grid">
+          <div class="dose-cell hl"><div class="dc-label">Single Dose</div><div class="dc-val">${r.singleDose}</div><div class="dc-unit">${r.singleDoseUnit||'mg'}</div></div>
+          <div class="dose-cell"><div class="dc-label">Daily Total</div><div class="dc-val">${r.dosePerDay}</div><div class="dc-unit">${r.singleDoseUnit||'mg'}/day</div></div>
+          <div class="dose-cell"><div class="dc-label">Frequency</div><div class="dc-val">${r.dosesPerDay}×</div><div class="dc-unit">q${r.frequencyHours}h</div></div>
+          <div class="dose-cell"><div class="dc-label">Duration</div><div class="dc-val" style="font-size:12px">${r.duration}</div></div>
+          <div class="dose-cell wn"><div class="dc-label">Max/Day</div><div class="dc-val" style="font-size:12px">${r.maxDosePerDay}</div></div>
+          <div class="dose-cell dg"><div class="dc-label">Toxic</div><div class="dc-val" style="font-size:12px">${r.toxicDose}</div></div>
+        </div>
+        ${r.renalAdjustment?`<div class="oa kidney">🫘 Renal: ${r.renalAdjustment}</div>`:''}
+        ${r.hepaticAdjustment?`<div class="oa liver">🫀 Hepatic: ${r.hepaticAdjustment}</div>`:''}
+        <div class="ind-list">${(r.indications||[]).map(i=>`<span class="ind-tag">${i}</span>`).join('')}</div>
+        <div class="wb" style="margin-top:12px">
+          <div class="wb-hd"><div class="card-icon">🖊️</div><div class="card-title">AI Calculation Whiteboard</div></div>
+          <div class="wb-body"><span class="csec">── AI STEPS ──</span>\n<span class="cf">${(r.calcSteps||'').replace(/\n/g,'\n')}</span></div>
+        </div>
+      </div>
+    </div>`;
 }
 
-function switchDrugTab(btn, contentId) {
-  const container = btn.closest('.drug-result-body');
-  container.querySelectorAll('.result-tab').forEach(t => t.classList.remove('active'));
-  container.querySelectorAll('.result-tab-content').forEach(c => c.classList.remove('active'));
+function switchTab(btn, id) {
+  const body = btn.closest('.drug-result-body');
+  body.querySelectorAll('.rtab').forEach(t => t.classList.remove('active'));
+  body.querySelectorAll('.rtab-content').forEach(c => c.classList.remove('active'));
   btn.classList.add('active');
-  const el = document.getElementById(contentId);
+  const el = document.getElementById(id);
   if (el) el.classList.add('active');
 }
 
 function resetResults() {
-  document.getElementById('resultsPanel').innerHTML = `<div class="empty-state"><div class="empty-state-icon-img"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png" alt="MedCalc Pro"></div><div class="empty-state-text">Enter patient information and calculate doses</div></div>`;
+  document.getElementById('resultsPanel').innerHTML = `<div class="empty-state"><div class="es-icon"><img src="https://cdn-icons-png.flaticon.com/512/3492/3492182.png"></div><div class="es-text">Enter patient info and calculate doses</div></div>`;
 }
 
-function showAIThinking(text) { const el = document.getElementById('aiThinking'); document.getElementById('aiThinkingText').textContent = text; el.classList.add('show'); }
-function hideAIThinking() { document.getElementById('aiThinking').classList.remove('show'); }
+function showAI(txt) {
+  document.getElementById('aiThinkingText').textContent = txt;
+  document.getElementById('aiThinking').classList.add('show');
+}
+function hideAI() { document.getElementById('aiThinking').classList.remove('show'); }
 
-function saveHistory(patient, diagnoses, drugs) {
-  const entry = { id: Date.now(), time: new Date().toLocaleString(), patient: `${patient.age}${patient.ageUnit[0]} / ${patient.weight}kg`, diagnoses: diagnoses.join(', '), drugs: drugs.join(', '), data: { patient, diagnoses, drugs } };
-  calcHistory.unshift(entry);
+// ========================================================
+// HISTORY
+// ========================================================
+function saveHist(p, diags, drugs) {
+  const e = {id:Date.now(), time:new Date().toLocaleString(), patient:`${p.age}${p.ageUnit[0]}/${p.weight}kg`, diagnoses:(diags||[]).join(', '), drugs:(drugs||[]).join(', '), data:{p,diags,drugs}};
+  calcHistory.unshift(e);
   if (calcHistory.length > 50) calcHistory.pop();
-  localStorage.setItem('medcalc_history', JSON.stringify(calcHistory));
-  renderHistoryList();
+  try { localStorage.setItem('medcalc_history', JSON.stringify(calcHistory)); } catch(e) {}
+  renderHist();
 }
 
-function renderHistoryList() {
-  const list = document.getElementById('historyList');
-  if (!calcHistory.length) { list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text3);font-size:12px">No history yet</div>'; return; }
-  list.innerHTML = calcHistory.map(h => `<div class="history-item" onclick="loadHistory('${h.id}')"><div class="history-dot"></div><div class="history-info"><div class="history-patient">${h.patient}</div><div class="history-diag">${h.diagnoses}</div><div class="history-diag" style="color:var(--accent3)">${h.drugs}</div></div><div class="history-time">${h.time}</div></div>`).join('');
+function renderHist() {
+  const el = document.getElementById('historyList');
+  if (!calcHistory.length) { el.innerHTML = '<div style="padding:20px;text-align:center;color:var(--tx3);font-size:12px">No history yet</div>'; return; }
+  el.innerHTML = calcHistory.map(h =>
+    `<div class="hist-item" onclick="loadHist(${h.id})">
+      <div class="hist-dot"></div>
+      <div class="hist-info">
+        <div class="hist-patient">${h.patient}</div>
+        <div class="hist-diag">${h.diagnoses}</div>
+        <div class="hist-diag" style="color:var(--ac3)">${h.drugs}</div>
+      </div>
+      <div class="hist-time">${h.time}</div>
+    </div>`
+  ).join('');
 }
 
-function loadHistory(id) {
-  const entry = calcHistory.find(h => h.id === parseInt(id));
-  if (!entry) return;
-  const { patient, diagnoses, drugs } = entry.data;
-  document.getElementById('patientAge').value = patient.age;
-  document.getElementById('ageUnit').value = patient.ageUnit;
-  document.getElementById('patientWeight').value = patient.weight;
-  if (patient.crea) { document.getElementById('labToggle').checked = true; toggleLab(); document.getElementById('labCrea').value = patient.crea; document.getElementById('labUrea').value = patient.urea||''; document.getElementById('labASAT').value = patient.asat||''; document.getElementById('labALAT').value = patient.alat||''; }
+function loadHist(id) {
+  const e = calcHistory.find(h => h.id === id);
+  if (!e) return;
+  const {p, diags, drugs} = e.data;
+  document.getElementById('patientAge').value = p.age;
+  document.getElementById('ageUnit').value = p.ageUnit;
+  document.getElementById('patientWeight').value = p.weight;
+  if (p.crea) {
+    document.getElementById('labToggle').checked = true; toggleLab();
+    document.getElementById('labCrea').value = p.crea||'';
+    document.getElementById('labUrea').value = p.urea||'';
+    document.getElementById('labASAT').value = p.asat||'';
+    document.getElementById('labALAT').value = p.alat||'';
+  }
   toggleHistory();
-  renderResults(patient, drugs, 1);
+  renderResults(p, drugs, 1);
   showNotif('✅ History loaded');
 }
 
 function clearHistory() {
-  if (confirm('Clear all history?')) { calcHistory = []; localStorage.removeItem('medcalc_history'); renderHistoryList(); }
+  if (!confirm('Clear all history?')) return;
+  calcHistory = [];
+  try { localStorage.removeItem('medcalc_history'); } catch(e){}
+  renderHist();
 }
 
 function toggleHistory() {
   const sb = document.getElementById('historySidebar');
-  sb.style.display = sb.style.display === 'none' ? 'block' : 'none';
-  if (sb.style.display === 'block') renderHistoryList();
+  sb.style.display = sb.style.display==='none' ? 'block' : 'none';
+  if (sb.style.display==='block') renderHist();
 }
 
 function showNotif(msg) {
@@ -1260,14 +1146,17 @@ function showNotif(msg) {
   setTimeout(() => n.classList.remove('show'), 3000);
 }
 
+// Close dropdowns on outside click
 document.addEventListener('click', e => {
-  if (!e.target.closest('.autocomplete-wrap')) {
+  if (!e.target.closest('.ac-wrap')) {
     document.getElementById('diagDropdown').classList.remove('show');
     document.getElementById('drugDropdown').classList.remove('show');
   }
 });
 
-renderHistoryList();
+// Init
+renderHist();
 </script>
+
 </body>
 </html>
